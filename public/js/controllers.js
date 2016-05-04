@@ -61,7 +61,7 @@ app.controller('clientsCtrl', function($scope, Clients) {
 
 
 
-app.controller('propertiesCtrl', function($scope, Properties) {
+app.controller('propertiesCtrl', function($scope, Properties,$filter) {
     console.log('propertiesCtrl loaded');
     Properties.getAll()
         .then(function(properties) {
@@ -136,6 +136,39 @@ app.controller('propertiesCtrl', function($scope, Properties) {
 
 
     }
+
+    $scope.showAvailable = () => {
+        $scope.searchFilterByStatus = 'available';
+    }
+    $scope.showAll = () => {
+        $scope.searchFilterByStatus = '';
+    }
+    // $scope.showTotalNum = () => {
+    //     if ($scope.properties) {
+    //         var totalNum = $scope.properties.length;
+    //     }
+    //     return totalNum;
+    // }
+    $scope.showTotalrPrice = () => {
+        var totalrPrice = 0;
+        if ($scope.properties) {
+            for (var i = 0; i < $scope.properties.length; i++) {
+                totalrPrice = totalrPrice + $scope.properties[i].rPrice
+            }
+        }
+        return totalrPrice;
+        console.log(totalrPrice);
+    }
+    $scope.showTotaluCost = () => {
+        var totaluCost = 0;
+        if ($scope.properties) {
+        for (var i = 0; i < $scope.properties.length; i++) {
+            totaluCost = totaluCost + $scope.properties[i].uCost
+        }}
+        return totaluCost;
+        console.log(totaluCost);
+    }
+
 
 
 });

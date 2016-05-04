@@ -1,6 +1,27 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3" ng-if="!edditedProperty">
+            <h2><i class="glyphicon glyphicon-cog" aria-hidden="true"></i> Filter</h2>
+            <form ng-submit="priceFilter()">
+                <h5 for="exampleInputEmail3">Rent Price range</h5>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="min" ng-model="rPriceFilter.min">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="max" ng-model="rPriceFilter.max">
+                </div>
+                <h5 for="exampleInputEmail3">Utilities Cost range</h5>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="min" ng-model="uCostFilter.min">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="max" ng-model="uCostFilter.max">
+                </div>
+                <button class="btn btn-success btn-block">update filter</button>
+                <div class="btn btn-default btn-block" ng-click="showAvailable()">Only Show Available</div>
+                <div class="btn btn-default btn-block" ng-click="showAll()">Show me all</div>
+            </form>
+            <hr>
             <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add property</h2>
             <form ng-submit="addnewOne(newOne)">
                 <div class="form-group">
@@ -28,24 +49,8 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Add</button>
             </form>
-            <h2><i class="glyphicon glyphicon-cog" aria-hidden="true"></i> Filter</h2>
-            <form ng-submit="priceFilter()">
-                <h5 for="exampleInputEmail3">Rent Price range</h5>
-                <div class="form-group">
-                    <input type="number" class="form-control" placeholder="min" ng-model="rPriceFilter.min">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" placeholder="max" ng-model="rPriceFilter.max">
-                </div>
-                <h5 for="exampleInputEmail3">Utilities Cost range</h5>
-                <div class="form-group">
-                    <input type="number" class="form-control" placeholder="min" ng-model="uCostFilter.min">
-                </div>
-                <div class="form-group">
-                    <input type="number" class="form-control" placeholder="max" ng-model="uCostFilter.max">
-                </div>
-                <button class="btn btn-default btn-block" ng-click="cancelClicked()">update filter</button>
-            </form>
+            <hr>
+
         </div>
         <div class="col-sm-3" ng-if="edditedProperty">
             <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Edit {{edditedProperty.name}}</h2>
@@ -81,6 +86,11 @@
 
         <div class="col-sm-9">
             <br>
+            <!-- <h4>{{showTotalNum()}} results found</h4> -->
+            <h4>{{(properties | filter: searchFilterByStatus).length}} results found</h4>
+            <!-- <p>Total rent Price: {{showTotalrPrice() | currency: $}}</p> -->
+            <p>Average rent Price: <b>{{showTotalrPrice() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p>
+                <p>Average utilities Cost: <b>{{showTotaluCost() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p>
             <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
             <br>
             <!-- <input type="text" class="rPriceSlider" ng-model="rPriceSlider" data-slider-min="0" data-slider-max="5000" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="hide" data-slider-orientation="horizontal"> -->
@@ -89,17 +99,17 @@
                     <thead>
                         <tr>
                             <th ng-click="sortBy('name')" style="cursor: pointer;">Item name</th>
-                            <th ng-click="sortBy('address')" style="cursor: pointer;">address</th>
                             <th ng-click="sortBy('oStatus')" style="cursor: pointer;">Occupation status</th>
+                            <th ng-click="sortBy('address')" style="cursor: pointer;">address</th>
                             <th ng-click="sortBy('rPrice')" style="cursor: pointer;">Rent Price</th>
-                            <th ng-click="sortBy('uCost')" style="cursor: pointer;">Utility Cost</th>
+                            <th ng-click="sortBy('uCost')" style="cursor: pointer;">Utilities Cost</th>
                         </tr>
                     </thead>
                     <tbody ng-if="properties.length>0">
-                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
+                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter |filter:searchFilterByStatus track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
                             <td>{{property.name}}</td>
-                            <td>{{property.address}}</td>
                             <td>{{property.oStatus}}</td>
+                            <td>{{property.address}}</td>
                             <td>{{property.rPrice | currency: $}}</td>
                             <td>{{property.uCost | currency: $}}</td>
                         </tr>
