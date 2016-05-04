@@ -21,49 +21,94 @@ app.controller('clientsCtrl', function($scope, Clients) {
             $scope.order = order;
         }
     }
-
-    $scope.addnewClient = () => {
-        console.log('$scope.newClient; ', $scope.newClient);
-        Clients.create($scope.newClient)
+    $scope.addnewOne = (newOne) => {
+        Clients.create(newOne)
             .then(function(res) {
-                console.log('client', res.data);
                 $scope.clients.unshift(res.data)
-                $scope.newClient = null;
+                $scope.newOne = null;
             }, function(err) {
-                console.log('err when get all clients: ', err);
+                console.log('err: ', err);
             })
     }
 
     $scope.editOne = (index, id) => {
-        console.log('ddd');
-        console.log('id clicked: ', id);
-        console.log('index: ', index);
         $scope.edditedClient = angular.copy($scope.clients[index]);
+        $scope.edditedClient.index = index;
     }
     $scope.cancelClicked = () => {
-        $scope.edditedClientId = null;
+        $scope.edditedClient = null;
     }
-    $scope.deleteOne = (id, index) => {
-        // console.log('id: ', id);
-        // console.log("$scope.clients: ", $scope.clients);
+    $scope.deleteOne = (index, id) => {
+        console.log('id: ', id);
         Clients.delete(id)
             .then(function(res) {
-                console.log('client', res.data);
                 $scope.clients.splice(index, 1);
-                $scope.edditedClientId = null;
+                $scope.edditedClient = '';
             }, function(err) {
-                console.log('err when deleting client: ', err);
+                console.log('err: ', err);
             })
     }
-    $scope.editOne = (id, index) => {
-        console.log('id: ', id);
+    $scope.edittedOne = (index, id) => {
         Clients.update(id, $scope.edditedClient)
             .then(function(res) {
-                // console.log('client', res.data);
                 $scope.clients[index] = $scope.edditedClient;
-                $scope.edditedClientId = null;
+                $scope.edditedClient = null;
             }, function(err) {
-                console.log('err when editting clients: ', err);
+                console.log('err: ', err);
             })
+    }
+});
+
+app.controller('propertiesCtrl', function($scope, Properties) {
+    console.log('propertiesCtrl loaded');
+
+    Properties.getAll()
+    .then(function(properties) {
+        $scope.properties = properties.data.reverse();
+    }, function(err) {
+        console.log('err when get all properties: ', err);
+    });
+    $scope.sortBy = (order) => {
+        if ($scope.order === order) {
+            $scope.order = `-${order}`;
+        } else {
+            $scope.order = order;
+        }
+    }
+    $scope.addnewOne = (newOne) => {
+        Properties.create(newOne)
+        .then(function(res) {
+            $scope.properties.unshift(res.data)
+            $scope.newOne = null;
+        }, function(err) {
+            console.log('err: ', err);
+        })
+    }
+
+    $scope.editOne = (index, id) => {
+        $scope.edditedProperty = angular.copy($scope.properties[index]);
+        $scope.edditedProperty.index = index;
+    }
+    $scope.cancelClicked = () => {
+        $scope.edditedProperty = null;
+    }
+    $scope.deleteOne = (index, id) => {
+        console.log('id: ', id);
+        Properties.delete(id)
+        .then(function(res) {
+            $scope.properties.splice(index, 1);
+            $scope.edditedProperty = '';
+        }, function(err) {
+            console.log('err: ', err);
+        })
+    }
+    $scope.edittedOne = (index, id) => {
+        Properties.update(id, $scope.edditedProperty)
+        .then(function(res) {
+            $scope.properties[index] = $scope.edditedProperty;
+            $scope.edditedProperty = null;
+        }, function(err) {
+            console.log('err: ', err);
+        })
     }
 });

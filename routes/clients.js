@@ -18,6 +18,13 @@ router.post('/', (req, res) => {
         res.send(client);
     });
 });
+router.delete('/:id', (req, res) => {
+    var clientId = req.params.id;
+    Client.findByIdAndRemove(clientId, (err) => {
+        if (err) return res.status(400).send('errr: ', err);
+        res.send(); // always give me an object
+    });
+});
 router.get('/:category', (req, res) => {
     var category = req.params.category;
     console.log('category: ', category);
@@ -34,13 +41,7 @@ router.put('/:id', (req, res) => {
         res.send(client); // always give me an object
     });
 });
-router.delete('/:id', (req, res) => {
-    var clientId = req.params.id;
-    Client.findByIdAndRemove(clientId, (err) => {
-        if (err) return res.status(400).send('errr: ', err);
-        res.send(); // always give me an object
-    });
-});
+
 router.delete('/', (req, res) => {
     Client.remove({}, (err, clients) => {
         if (err) return res.status(400).send('errr: ', err);
