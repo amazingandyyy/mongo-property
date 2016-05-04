@@ -33,6 +33,12 @@ app.service('Properties', function($http) {
     this.getAll = () => {
         return $http.get('/api/properties/');
     }
+    this.getAllByfilter = (rPriceMin,rPriceMax,uCostMin,uCostMax) => {
+        return $http({
+            method: 'GET',
+            url: `api/properties/find?rPriceMax=${rPriceMax}&rPriceMin=${rPriceMin}&uCostMin=${uCostMin}&uCostMax=${uCostMax}`
+        });
+    }
     this.create = (newCard) => {
         return $http({
             method: 'POST',

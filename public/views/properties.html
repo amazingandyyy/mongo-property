@@ -1,92 +1,111 @@
 <div class="container-fluid">
-<div class="row">
-    <div class="col-sm-3" ng-if="!edditedProperty">
-        <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add property</h2>
-        <form ng-submit="addnewOne(newOne)">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Item name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="newOne.name" required>
+    <div class="row">
+        <div class="col-sm-3" ng-if="!edditedProperty">
+            <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Add property</h2>
+            <form ng-submit="addnewOne(newOne)">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Item name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="newOne.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">address</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" ng-model="newOne.address">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Occupation status:</label>
+                    <select class="form-control" id="sel1" required ng-model="newOne.oStatus">
+                        <option value="available">available</option>
+                        <option value="occupied">occupied</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Rent Price</label>
+                    <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Rent Price" ng-model="newOne.rPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Utility Cost</label>
+                    <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Utility Cost" ng-model="newOne.uCost" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Add</button>
+            </form>
+            <h2><i class="glyphicon glyphicon-cog" aria-hidden="true"></i> Filter</h2>
+            <form ng-submit="priceFilter()">
+                <h5 for="exampleInputEmail3">Rent Price range</h5>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="min" ng-model="rPriceFilter.min">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="max" ng-model="rPriceFilter.max">
+                </div>
+                <h5 for="exampleInputEmail3">Utilities Cost range</h5>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="min" ng-model="uCostFilter.min">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" placeholder="max" ng-model="uCostFilter.max">
+                </div>
+                <button class="btn btn-default btn-block" ng-click="cancelClicked()">update filter</button>
+            </form>
+        </div>
+        <div class="col-sm-3" ng-if="edditedProperty">
+            <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Edit {{edditedProperty.name}}</h2>
+            <form ng-submit="edittedOne(edditedProperty.index, edditedProperty._id)">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Item name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="edditedProperty.name" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">address</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" ng-model="edditedProperty.address">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Occupation status:</label>
+                    <select class="form-control" id="sel1" required ng-model="edditedProperty.oStatus">
+                        <option value="available">available</option>
+                        <option value="occupied">occupied</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Rent Price</label>
+                    <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Rent Price" ng-model="edditedProperty.rPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Utility Cost</label>
+                    <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Utility Cost" ng-model="edditedProperty.uCost" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Update</button>
+                <div class="btn btn-danger btn-block" ng-click="deleteOne(edditedProperty.index, edditedProperty._id)">Delete</div>
+                <div class="btn btn-default btn-block" ng-click="cancelClicked()">Cancel</div>
+            </form>
+        </div>
+
+        <div class="col-sm-9">
+            <br>
+            <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
+            <br>
+            <!-- <input type="text" class="rPriceSlider" ng-model="rPriceSlider" data-slider-min="0" data-slider-max="5000" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="hide" data-slider-orientation="horizontal"> -->
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th ng-click="sortBy('name')" style="cursor: pointer;">Item name</th>
+                            <th ng-click="sortBy('address')" style="cursor: pointer;">address</th>
+                            <th ng-click="sortBy('oStatus')" style="cursor: pointer;">Occupation status</th>
+                            <th ng-click="sortBy('rPrice')" style="cursor: pointer;">Rent Price</th>
+                            <th ng-click="sortBy('uCost')" style="cursor: pointer;">Utility Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-if="properties.length>0">
+                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
+                            <td>{{property.name}}</td>
+                            <td>{{property.address}}</td>
+                            <td>{{property.oStatus}}</td>
+                            <td>{{property.rPrice | currency: $}}</td>
+                            <td>{{property.uCost | currency: $}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">address</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" ng-model="newOne.address">
-            </div>
-            <div class="form-group">
-                <label for="sel1">Occupation status:</label>
-                <select class="form-control" id="sel1" required ng-model="newOne.oStatus">
-                    <option value="available">available</option>
-                    <option value="occupied">occupied</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Rent Price</label>
-                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Rent Price" ng-model="newOne.rPrice" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Utility Cost</label>
-                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Utility Cost" ng-model="newOne.uCost" required>
-            </div>
-            <button type="submit" class="btn btn-success">Add</button>
-        </form>
-    </div>
-    <div class="col-sm-3" ng-if="edditedProperty">
-        <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Edit {{edditedProperty.name}}</h2>
-        <form ng-submit="edittedOne(edditedProperty.index, edditedProperty._id)">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Item name</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="edditedProperty.name" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">address</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" ng-model="edditedProperty.address">
-            </div>
-            <div class="form-group">
-                <label for="sel1">Occupation status:</label>
-                <select class="form-control" id="sel1" required ng-model="edditedProperty.oStatus">
-                    <option value="available">available</option>
-                    <option value="occupied">occupied</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Rent Price</label>
-                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Rent Price" ng-model="edditedProperty.rPrice" required>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Utility Cost</label>
-                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Utility Cost" ng-model="edditedProperty.uCost" required>
-            </div>
-            <button type="submit" class="btn btn-success btn-block">Update</button>
-            <div class="btn btn-danger btn-block" ng-click="deleteOne(edditedProperty.index, edditedProperty._id)">Delete</div>
-            <div class="btn btn-default btn-block" ng-click="cancelClicked()">Cancel</div>
-        </form>
-    </div>
-    <div class="col-sm-9">
-        <br>
-        <br>
-        <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
-        <br>
-        <div class="table-responsive">
-            <table class="table table-hover table-bordered">
-                <thead>
-                    <tr>
-                        <th ng-click="sortBy('name')" style="cursor: pointer;">Item name</th>
-                        <th ng-click="sortBy('address')" style="cursor: pointer;">address</th>
-                        <th ng-click="sortBy('oStatus')" style="cursor: pointer;">Occupation status</th>
-                        <th ng-click="sortBy('rPrice')" style="cursor: pointer;">Rent Price</th>
-                        <th ng-click="sortBy('uCost')" style="cursor: pointer;">Utility Cost</th>
-                    </tr>
-                </thead>
-                <tbody ng-if="properties.length>0">
-                    <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
-                        <td>{{property.name}}</td>
-                        <td>{{property.address}}</td>
-                        <td>{{property.oStatus}}</td>
-                        <td>{{property.rPrice}}</td>
-                        <td>{{property.uCost}}</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
-</div>
 </div>

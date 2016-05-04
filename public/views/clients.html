@@ -15,7 +15,7 @@
                 <label for="exampleInputPassword1">phone</label>
                 <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="phone" ng-model="newOne.phone" required>
             </div>
-            <button type="submit" class="btn btn-success">Add</button>
+            <button type="submit" class="btn btn-success btn-block">Add {{newOne.name}} as a new client</button>
         </form>
     </div>
     <div class="col-sm-3" ng-if="edditedClient">
@@ -40,7 +40,8 @@
     </div>
     <div class="col-sm-9">
         <br>
-        <br>
+        <p>Double click to update clients' profiles.</p>
+
         <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
         <br>
         <div class="table-responsive">

@@ -59,15 +59,16 @@ app.controller('clientsCtrl', function($scope, Clients) {
     }
 });
 
+
+
 app.controller('propertiesCtrl', function($scope, Properties) {
     console.log('propertiesCtrl loaded');
-
     Properties.getAll()
-    .then(function(properties) {
-        $scope.properties = properties.data.reverse();
-    }, function(err) {
-        console.log('err when get all properties: ', err);
-    });
+        .then(function(properties) {
+            $scope.properties = properties.data.reverse();
+        }, function(err) {
+            console.log('err when get all properties: ', err);
+        });
     $scope.sortBy = (order) => {
         if ($scope.order === order) {
             $scope.order = `-${order}`;
@@ -77,12 +78,12 @@ app.controller('propertiesCtrl', function($scope, Properties) {
     }
     $scope.addnewOne = (newOne) => {
         Properties.create(newOne)
-        .then(function(res) {
-            $scope.properties.unshift(res.data)
-            $scope.newOne = null;
-        }, function(err) {
-            console.log('err: ', err);
-        })
+            .then(function(res) {
+                $scope.properties.unshift(res.data)
+                $scope.newOne = null;
+            }, function(err) {
+                console.log('err: ', err);
+            })
     }
 
     $scope.editOne = (index, id) => {
@@ -95,20 +96,46 @@ app.controller('propertiesCtrl', function($scope, Properties) {
     $scope.deleteOne = (index, id) => {
         console.log('id: ', id);
         Properties.delete(id)
-        .then(function(res) {
-            $scope.properties.splice(index, 1);
-            $scope.edditedProperty = '';
-        }, function(err) {
-            console.log('err: ', err);
-        })
+            .then(function(res) {
+                $scope.properties.splice(index, 1);
+                $scope.edditedProperty = '';
+            }, function(err) {
+                console.log('err: ', err);
+            })
     }
     $scope.edittedOne = (index, id) => {
         Properties.update(id, $scope.edditedProperty)
-        .then(function(res) {
-            $scope.properties[index] = $scope.edditedProperty;
-            $scope.edditedProperty = null;
-        }, function(err) {
-            console.log('err: ', err);
-        })
+            .then(function(res) {
+                $scope.properties[index] = $scope.edditedProperty;
+                $scope.edditedProperty = null;
+            }, function(err) {
+                console.log('err: ', err);
+            })
     }
+
+    $scope.rPriceFilter = {};
+    $scope.uCostFilter = {};
+    $scope.priceFilter = () => {
+
+        var rPriceMin = $scope.rPriceFilter.min || 0;
+        var rPriceMax = $scope.rPriceFilter.max || 100000000;
+        var uCostMin = $scope.uCostFilter.min || 0;
+        var uCostMax = $scope.uCostFilter.max || 100000000;
+
+        console.log('rent price range: ', rPriceMin, ' ~ ', rPriceMax);
+        console.log('Utilities cost range: ', uCostMin, ' ~ ', uCostMax);
+        // console.log('oStatusAvailable: ', oStatusAvailable);
+
+        Properties.getAllByfilter(rPriceMin, rPriceMax, uCostMin, uCostMax)
+            .then(function(properties) {
+                console.log('yeahhhhhh: ', properties.data);
+                $scope.properties = properties.data;
+            }, function(err) {
+                console.log('err when get all bt filter properties: ', err);
+            });
+
+
+    }
+
+
 });
