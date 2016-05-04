@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-sm-3" ng-if="!edditedClient">
+        <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> New client</h2>
+        <form ng-submit="addnewClient()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="newClient.name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">email</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="email" ng-model="newClient.email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">phone</label>
+                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="phone" ng-model="newClient.phone" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
+    </div>
+    <div class="col-sm-3" ng-if="edditedClient">
+        <h2><i class="fa fa-plus-square-o" aria-hidden="true"></i> Edit {{edditedClient}}</h2>
+        <form ng-submit="addnewClient()">
+            <div class="form-group">
+                <label for="exampleInputEmail1">name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" ng-model="edditedClient.name" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">email</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="email" ng-model="edditedClient.email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">phone</label>
+                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="phone" ng-model="edditedClient.phone" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
+    </div>
+    <div class="col-sm-9">
+        <br>
+        <br>
+        <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
+        <br>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th ng-click="sortBy('name')" style="cursor: pointer;">name</th>
+                        <th ng-click="sortBy('email')" style="cursor: pointer;">email</th>
+                        <th ng-click="sortBy('phone')" style="cursor: pointer;">phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-dblclick="editOne(clients.indexOf(client), client._)" ng-repeat="client in clients  | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;">
+                        <td>{{client.name}}</td>
+                        <td>{{client.email}}</td>
+                        <td>{{client.phone}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
