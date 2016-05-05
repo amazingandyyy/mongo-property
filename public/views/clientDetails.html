@@ -1,23 +1,70 @@
 <div class="container">
     <div class="row">
-    <br><br>
-    <div class="col-sm-1 col-md-2"></div>
-    <div class="col-sm-10 col-md-8">
-        <div class="jumbotron">
-            <h2>{{client.name}}</h2>
-            <h4><i class="fa fa-envelope-o" aria-hidden="true"></i> {{client.email}}</h4>
-            <h4><i class="fa fa-phone" aria-hidden="true"></i> {{client.phone}}</h4>
+        <br>
+        <br>
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-10 col-md-8">
+            <h1 class="text-center">{{client.name | capitalize}}</h1>
+            <h4><i class="fa fa-info" aria-hidden="true"></i> Infomation</h4>
+            <table class="table table-condensed table-bordered table-responsive">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> {{client.phone}}</p>
+                        </td>
+                        <td>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{client.email}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="client.properties.length > 0">
+                <h4><i class="fa fa-home" aria-hidden="true"></i> property <button type="button" class="btn btn-danger btn-xs" ng-click="removeProperty(client._id, client.properties[0]._id)">Disconnect</button></h4>
+                <table class="table table-condensed table-bordered table-responsive">
+                    <tbody>
+                        <tr>
+                            <td>Property name</td>
+                            <td>{{client.properties[0].name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Occupation status</td>
+                            <td>{{client.properties[0].oStatus}}</td>
+                        </tr>
+                        <tr>
+                            <td>Rent Price</td>
+                            <td>{{client.properties[0].rPrice}}</td>
+                        </tr>
+                        <tr>
+                            <td>Utilities Cost</td>
+                            <td>{{client.properties[0].uCost}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{client.properties[0].address}}</td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-xs" ng-click="addProperty(client._id, property._id)">Edit this property</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <table class="table table-condensed table-responsive">
+
+                </table>
+            </div>
         </div>
+        <div class="col-sm-1 col-md-2"></div>
     </div>
-    <div class="col-sm-1 col-md-2"></div>
-</div>
-    <div class="row" ng-controller="propertiesCtrl">
+    <div class="row" ng-controller="propertiesCtrl" ng-if="!(client.properties.length > 0)">
         <div class="col-sm-1 col-md-2">
         </div>
         <div class="col-sm-10 col-md-8">
             <br>
             <h4>{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} results found</h4>
-            <input type="text" class="form-control" placeholder="look up his property to register" ng-model="searchFilter">
+            <input type="text" class="form-control" placeholder="search for his property to connect" ng-model="searchFilter">
             <br>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
@@ -31,6 +78,9 @@
                         <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter | filter:searchFilterByStatus track by $index" style="cursor: pointer">
                             <td>{{property.name}}</td>
                             <td>{{property.address}}</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-xs" ng-click="addProperty(client._id, property._id)">Connect this property</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

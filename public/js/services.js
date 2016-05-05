@@ -9,6 +9,12 @@ app.service('Clients', function($http) {
     this.getClientById = (clientId) => {
         return $http.get(`/api/clients/${clientId}`);
     }
+    this.addProperty = (clientId, propertyId) => {
+        return $http.put(`/api/clients/${clientId}/addProperty/${propertyId}`);
+    }
+    this.removeProperty = (clientId, propertyId) => {
+        return $http.delete(`/api/clients/${clientId}/addProperty/${propertyId}`);
+    }
     this.create = (newCard) => {
         return $http({
             method: 'POST',

@@ -17,11 +17,12 @@ router.get('/', (err, res) => {
 router.get('/:id', (req, res) => {
     console.log('req.params: ', req.params);
     var clientId = req.params.id;
-    console.log('clientId: ', clientId);
+    console.log('clientIdddd: ', clientId);
     Client.findById(clientId, (err, user) => {
         if (err) return res.status(400).send('errr: ', err);
+        console.log('userrrrr: ', user);
         res.send(user);
-    });
+    }).populate('properties');
 });
 
 router.post('/', (req, res) => {
@@ -39,6 +40,15 @@ router.route('/:clientId/addProperty/:propertyId')
         console.log('clientId: ', clientId);
         console.log('propertyId: ', propertyId);
         Client.addProperty(clientId, propertyId, err => {
+            res.status(err ? 400 : 200).send(err)
+        });
+    })
+    .delete((req, res) => {
+        var clientId = req.params.clientId;
+        var propertyId = req.params.propertyId;
+        console.log('clientId: ', clientId);
+        console.log('propertyId: ', propertyId);
+        Client.removeProperty(clientId, propertyId, err => {
             res.status(err ? 400 : 200).send(err)
         });
     });
@@ -70,7 +80,6 @@ router.put('/:id', (req, res) => {
         res.send(client); // always give me an object
     });
 });
-
 router.delete('/', (req, res) => {
     Client.remove({}, (err, clients) => {
         if (err) return res.status(400).send('errr: ', err);

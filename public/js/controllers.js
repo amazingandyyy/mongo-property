@@ -59,12 +59,13 @@ app.controller('clientsCtrl', function($scope, Clients) {
     }
     $scope.getClientById = (clientId) => {
         console.log('getClientById: ', clientId);
-
     }
 });
 
-app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams,Clients) {
+app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clients) {
     console.log('getClientByIdCtrl loaded');
+    // console.log('$stateParams: ', $stateParams.clientId);
+    console.log('$stateParams: ', $stateParams);
     Clients.getClientById($stateParams.clientId)
         .then(function(client) {
             var client = client.data;
@@ -72,7 +73,40 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams,Clien
         }, function(err) {
             console.log('err when get one client detail: ', err);
         });
+
+    $scope.addProperty = (clientId, propertyId) => {
+        console.log('clientId: ', clientId);
+        console.log('propertyId: ', propertyId);
+        Clients.addProperty(clientId, propertyId)
+            .then(function(data) {
+                console.log('dataaaaaaaa 80: ', data);
+                // $scope.client.properties = client;
+            }, function(err) {
+                console.log('err when get one client detail: ', err);
+            });
+    }
+    $scope.removeProperty = (clientId, propertyId) => {
+        console.log('clientId: ', clientId);
+        console.log('propertyId: ', propertyId);
+        Clients.removeProperty(clientId, propertyId)
+            .then(function(data) {
+                console.log('dataaaaaaaa 80: ', data);
+                // $scope.client.properties = client;
+            }, function(err) {
+                console.log('err when get one client detail: ', err);
+            });
+    }
 });
+app.filter('capitalize', function() {
+    return function(str) {
+        return (!!str) ? str.charAt(0).toUpperCase() + str.substr(1).toLowerCase() : '';
+    }
+});
+// app.filter('phone', function() {
+//     return function(num) {
+//       return num.split('');
+//     }
+// });
 
 
 
@@ -81,7 +115,7 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams,Clien
 
 
 
-app.controller('propertiesCtrl', function($scope, Properties,$filter) {
+app.controller('propertiesCtrl', function($scope, Properties, $filter) {
     console.log('propertiesCtrl loaded');
     Properties.getAll()
         .then(function(properties) {
@@ -161,14 +195,14 @@ app.controller('propertiesCtrl', function($scope, Properties,$filter) {
         $scope.searchFilterByStatus = 'available';
     }
     $scope.showAll = () => {
-        $scope.searchFilterByStatus = '';
-    }
-    // $scope.showTotalNum = () => {
-    //     if ($scope.properties) {
-    //         var totalNum = $scope.properties.length;
-    //     }
-    //     return totalNum;
-    // }
+            $scope.searchFilterByStatus = '';
+        }
+        // $scope.showTotalNum = () => {
+        //     if ($scope.properties) {
+        //         var totalNum = $scope.properties.length;
+        //     }
+        //     return totalNum;
+        // }
     $scope.showTotalrPrice = () => {
         var totalrPrice = 0;
         if ($scope.properties) {
@@ -182,9 +216,10 @@ app.controller('propertiesCtrl', function($scope, Properties,$filter) {
     $scope.showTotaluCost = () => {
         var totaluCost = 0;
         if ($scope.properties) {
-        for (var i = 0; i < $scope.properties.length; i++) {
-            totaluCost = totaluCost + $scope.properties[i].uCost
-        }}
+            for (var i = 0; i < $scope.properties.length; i++) {
+                totaluCost = totaluCost + $scope.properties[i].uCost
+            }
+        }
         return totaluCost;
         console.log(totaluCost);
     }
