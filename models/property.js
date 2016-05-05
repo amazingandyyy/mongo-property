@@ -5,40 +5,46 @@ var mongoose = require('mongoose');
 var propertySchema = new mongoose.Schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     address: {
         type: String,
-        require: true
+        required: true
     },
     oStatus: {
         type: String,
-        require: true,
+        required: true,
         enum: ['available', 'occupied'],
         default: 'available'
     },
     rPrice: {
         type: Number,
         min: 1,
-        require: true
+        required: true
     },
     uCost: {
         type: Number,
         min: 0,
-        require: true
+        required: true
     },
     zip: {
         type: Number,
         min: 10000,
         max: 99999,
-        require: true
+        required: true
     },
     createdAt: {
         type: Date,
         default: Date.now,
-        require: true
-    }
+        required: true
+    },
+    clients: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Client'
+    }]
 });
 var Property = mongoose.model('Property', propertySchema);
+
+
 
 module.exports = Property;

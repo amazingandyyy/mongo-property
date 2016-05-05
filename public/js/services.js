@@ -6,6 +6,9 @@ app.service('Clients', function($http) {
     this.getAll = () => {
         return $http.get('/api/clients/');
     }
+    this.getClientById = (clientId) => {
+        return $http.get(`/api/clients/${clientId}`);
+    }
     this.create = (newCard) => {
         return $http({
             method: 'POST',

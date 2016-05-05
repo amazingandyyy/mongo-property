@@ -17,6 +17,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '../views/clients.html',
             controller: 'clientsCtrl'
         })
+        .state('getClientById', {
+            url: '/client/:clientId',
+            templateUrl: '../views/clientDetails.html',
+            controller: 'getClientByIdCtrl'
+        })
         .state('properties', {
             url: '/properties/',
             templateUrl: '../views/properties.html',

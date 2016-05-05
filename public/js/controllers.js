@@ -57,7 +57,27 @@ app.controller('clientsCtrl', function($scope, Clients) {
                 console.log('err: ', err);
             })
     }
+    $scope.getClientById = (clientId) => {
+        console.log('getClientById: ', clientId);
+
+    }
 });
+
+app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams,Clients) {
+    console.log('getClientByIdCtrl loaded');
+    Clients.getClientById($stateParams.clientId)
+        .then(function(client) {
+            var client = client.data;
+            $scope.client = client;
+        }, function(err) {
+            console.log('err when get one client detail: ', err);
+        });
+});
+
+
+
+
+
 
 
 
@@ -168,7 +188,5 @@ app.controller('propertiesCtrl', function($scope, Properties,$filter) {
         return totaluCost;
         console.log(totaluCost);
     }
-
-
 
 });

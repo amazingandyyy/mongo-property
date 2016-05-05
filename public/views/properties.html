@@ -87,10 +87,12 @@
         <div class="col-sm-9">
             <br>
             <!-- <h4>{{showTotalNum()}} results found</h4> -->
-            <h4>{{(properties | filter: searchFilterByStatus).length}} results found</h4>
+            <h4>{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} results found</h4>
+            <!-- <h4>{{filteredProperties.length}} resultsss found</h4> -->
             <!-- <p>Total rent Price: {{showTotalrPrice() | currency: $}}</p> -->
-            <p>Average rent Price: <b>{{showTotalrPrice() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p>
-                <p>Average utilities Cost: <b>{{showTotaluCost() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p>
+            <!-- <p>Average rent Price: <b>{{showTotalrPrice() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p> -->
+            <!-- <p>{{ (properties | filter: searchFilterByStatus | filter: searchFilter) }}</p> -->
+            <!-- <p>Average utilities Cost: <b>{{showTotaluCost() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p> -->
             <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
             <br>
             <!-- <input type="text" class="rPriceSlider" ng-model="rPriceSlider" data-slider-min="0" data-slider-max="5000" data-slider-step="1" data-slider-value="-14" data-slider-orientation="vertical" data-slider-selection="after" data-slider-tooltip="hide" data-slider-orientation="horizontal"> -->
@@ -106,7 +108,7 @@
                         </tr>
                     </thead>
                     <tbody ng-if="properties.length>0">
-                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter |filter:searchFilterByStatus track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
+                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter | filter:searchFilterByStatus track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
                             <td>{{property.name}}</td>
                             <td>{{property.oStatus}}</td>
                             <td>{{property.address}}</td>

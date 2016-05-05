@@ -54,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody ng-if="clients.length>0">
-                    <tr ng-repeat="client in clients | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;" ng-dblclick="editOne(clients.indexOf(client), client._id)" >
+                    <tr ui-sref="getClientById({clientId: client._id})"  ng-click="getClientById(client._id)" ng-repeat="client in clients | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;" ng-dblclick="editOne(clients.indexOf(client), client._id)" >
                         <td>{{client.name}}</td>
                         <td>{{client.email}}</td>
                         <td>{{client.phone}}</td>

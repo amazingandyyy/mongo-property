@@ -5,12 +5,25 @@ var router = express.Router();
 var Client = require('../models/client')
 
 router.get('/', (err, res) => {
-    Client.find({}, (err, clients) => {
+    Client
+        .find({})
+        .populate('properties')
+        .exec((err, clients) => {
+            if (err) return res.status(400).send('errr: ', err);
+            console.log(clients);
+            res.send(clients); // always give me an array
+        })
+});
+router.get('/:id', (req, res) => {
+    console.log('req.params: ', req.params);
+    var clientId = req.params.id;
+    console.log('clientId: ', clientId);
+    Client.findById(clientId, (err, user) => {
         if (err) return res.status(400).send('errr: ', err);
-        console.log(clients);
-        res.send(clients); // always give me an array
+        res.send(user);
     });
 });
+
 router.post('/', (req, res) => {
     var newClient = new Client(req.body);
     newClient.save((err, client) => {
@@ -18,6 +31,18 @@ router.post('/', (req, res) => {
         res.send(client);
     });
 });
+
+router.route('/:clientId/addProperty/:propertyId')
+    .put((req, res) => {
+        var clientId = req.params.clientId;
+        var propertyId = req.params.propertyId;
+        console.log('clientId: ', clientId);
+        console.log('propertyId: ', propertyId);
+        Client.addProperty(clientId, propertyId, err => {
+            res.status(err ? 400 : 200).send(err)
+        });
+    });
+
 router.delete('/:id', (req, res) => {
     var clientId = req.params.id;
     Client.findByIdAndRemove(clientId, (err) => {
@@ -28,7 +53,9 @@ router.delete('/:id', (req, res) => {
 router.get('/:category', (req, res) => {
     var category = req.params.category;
     console.log('category: ', category);
-    Client.find({cate: category}, (err, clients)=>{
+    Client.find({
+        cate: category
+    }, (err, clients) => {
         if (err) return res.status(400).send('errr: ', err);
         res.send(clients);
     })
@@ -36,7 +63,9 @@ router.get('/:category', (req, res) => {
 router.put('/:id', (req, res) => {
     var clientId = req.params.id;
     var updateInfo = req.body;
-    Client.findByIdAndUpdate(clientId, {$set: updateInfo}, (err, client) => {
+    Client.findByIdAndUpdate(clientId, {
+        $set: updateInfo
+    }, (err, client) => {
         if (err) return res.status(400).send('errr: ', err);
         res.send(client); // always give me an object
     });

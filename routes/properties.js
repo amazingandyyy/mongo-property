@@ -22,6 +22,7 @@ router.get('/', (req, res) => {
         .find({})
         // .limit(limit)
         // .sort(sort)
+        .populate('clients')
         .exec((err, clients) => {
             res.status(err ? 400 : 200).send(err || clients);
         });
