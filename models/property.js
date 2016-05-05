@@ -27,16 +27,10 @@ var propertySchema = new mongoose.Schema({
         min: 0,
         required: true
     },
-    zip: {
-        type: Number,
-        min: 10000,
-        max: 99999,
-        required: true
-    },
     createdAt: {
         type: Date,
         default: Date.now,
-        required: true
+        require: true
     },
     clients: [{
         type: mongoose.Schema.Types.ObjectId,
