@@ -5,27 +5,23 @@ var router = express.Router();
 var Property = require('../models/property')
 
 router.get('/', (req, res) => {
-
-    // console.log("gettt req.query: ", req.query);
-    // console.log("gettt req.query.limit: ", req.query.limit);
-    // console.log("gettt req.query.sort: ", req.query.sort);
-
-    //
-    // var limit = parseInt(req.query.limit);
-    // var sort = req.query.sort;
-    // delete req.query.limit;
-    //
-    // console.log('aa limit: ', limit);
-    // console.log('aa sort: ', sort);
-
     Property
         .find({})
-        // .limit(limit)
-        // .sort(sort)
         .populate('clients')
-        .exec((err, clients) => {
-            res.status(err ? 400 : 200).send(err || clients);
+        .exec((err, properties) => {
+            res.status(err ? 400 : 200).send(err || properties);
         });
+});
+
+router.get('/:id', (req, res) => {
+    console.log('req.params: ', req.params);
+    var propertyId = req.params.id;
+    console.log('propertyIdddd: ', propertyId);
+    Property.findById(propertyId, (err, property) => {
+        if (err) return res.status(400).send('errr: ', err);
+        console.log('userrrrr: ', property);
+        res.send(property);
+    }).populate('clients');
 });
 
 router.get('/find', (req, res) => {
@@ -46,21 +42,6 @@ router.get('/find', (req, res) => {
     console.log('aa uCostMax: ', uCostMax);
 
     Property
-    // [{
-    //     $match: {
-    //         $or: [{
-    //             'rPrice': {
-    //                 $gt: rPriceMin,
-    //                 $lt: rPriceMax
-    //             }
-    //         }, {
-    //             'uCost': {
-    //                 $lt: uCostMax,
-    //                 $gt: uCostMin
-    //             }
-    //         }]
-    //     }
-    // }]
         .find({
             'rPrice': {
                 $lte: rPriceMax,
@@ -78,6 +59,26 @@ router.get('/find', (req, res) => {
             res.status(err ? 400 : 200).send(err || properties);
         });
 });
+
+router.route('/:propertyId/addClient/:clientId')
+    .put((req, res) => {
+        var propertyId = req.params.propertyId;
+        var clientId = req.params.clientId;
+        console.log('propertyIdd: ', propertyId);
+        console.log('clientIdd: ', clientId);
+        Properties.addClient(propertyId, clientId, err => {
+            res.status(err ? 400 : 200).send(err)
+        });
+    })
+    .delete((req, res) => {
+        var propertyId = req.params.propertyId;
+        var clientId = req.params.clientId;
+        console.log('propertyId: ', propertyId);
+        console.log('clientId: ', clientId);
+        Properties.removeClient(propertyId, clientId, err => {
+            res.status(err ? 400 : 200).send(err)
+        });
+    });
 
 router.post('/', (req, res) => {
     var newProperty = new Property(req.body);

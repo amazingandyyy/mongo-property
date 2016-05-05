@@ -32,13 +32,13 @@
                     <label for="exampleInputPassword1">address</label>
                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="address" ng-model="newOne.address">
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="sel1">Occupation status:</label>
                     <select class="form-control" id="sel1" required ng-model="newOne.oStatus">
                         <option value="available">available</option>
                         <option value="occupied">occupied</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <label for="exampleInputPassword1">Rent Price</label>
                     <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="Rent Price" ng-model="newOne.rPrice" required>
@@ -108,12 +108,16 @@
                         </tr>
                     </thead>
                     <tbody ng-if="properties.length>0">
-                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter | filter:searchFilterByStatus track by $index" style="cursor: pointer;" ng-dblclick="editOne(properties.indexOf(property), property._id)">
+                        <tr ng-repeat="property in properties | orderBy:order | filter:searchFilter | filter:searchFilterByStatus track by $index" style="cursor: pointer">
                             <td>{{property.name}}</td>
                             <td>{{property.oStatus}}</td>
                             <td>{{property.address}}</td>
                             <td>{{property.rPrice | currency: $}}</td>
                             <td>{{property.uCost | currency: $}}</td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-xs" ng-click="editOne(properties.indexOf(property), property._id)">Edit</button>
+                                <button type="button" class="btn btn-success btn-xs" ui-sref="getPropertyById({propertyId: property._id})" ng-click="getPropertyById(property._id)" >Check details</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

@@ -27,6 +27,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: '../views/properties.html',
             controller: 'propertiesCtrl'
         })
+        .state('getPropertyById', {
+            url: '/property/:propertyId',
+            templateUrl: '../views/propertyDetails.html',
+            controller: 'getPropertyByIdCtrl'
+        })
 
     $urlRouterProvider.otherwise('/');
 

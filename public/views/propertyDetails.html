@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <br>
+        <br>
+        <div class="col-sm-1 col-md-2"></div>
+        <div class="col-sm-10 col-md-8">
+            <h1 class="text-center">{{property.name | capitalize}}</h1>
+            <h4><i class="fa fa-info" aria-hidden="true"></i> Infomation</h4>
+            <table class="table table-condensed table-bordered table-responsive">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> {{property.oStatus}}</p>
+                        </td>
+                        <td>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.address}}</p>
+                        </td>
+                        <td>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.rPrice}}</p>
+                        </td>
+                        <td>
+                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.uCost}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div ng-if="property.clients.length > 0">
+                <h4><i class="fa fa-home" aria-hidden="true"></i> client <button type="button" class="btn btn-danger btn-xs" ng-click="removeClient(property._id, property.clients[0]._id)">Disconnect</button></h4>
+                <table class="table table-condensed table-bordered table-responsive">
+                    <tbody>
+                        <tr>
+                            <td>Client name</td>
+                            <td>{{property.clients[0].name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Client email</td>
+                            <td>{{property.clients[0].email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Client phone</td>
+                            <td>{{property.clients[0].phone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-condensed table-responsive">
+
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-1 col-md-2"></div>
+    </div>
+    <div class="row" ng-controller="clientsCtrl" ng-if="!(property.clients.length > 0)">
+        <div class="col-sm-1 col-md-2">
+        </div>
+        <div class="col-sm-10 col-md-8">
+            <br>
+            <h4>{{(clients | filter: searchFilter).length}} results found</h4>
+            <input type="text" class="form-control" placeholder="search" ng-model="searchFilter">
+            <br>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th ng-click="sortBy('name')" style="cursor: pointer;">name</th>
+                            <th ng-click="sortBy('email')" style="cursor: pointer;">email</th>
+                            <th ng-click="sortBy('phone')" style="cursor: pointer;">phone</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-if="clients.length>0">
+                        <tr ng-repeat="client in clients | orderBy:order | filter:searchFilter track by $index" style="cursor: pointer;">
+                            <td>{{client.name}}</td>
+                            <td>{{client.email}}</td>
+                            <td>{{client.phone}}</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-xs" ng-click="addClient(property._id, client._id)">Connect this client</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-1 col-md-2"></div>
+    </div>
+
+</div>

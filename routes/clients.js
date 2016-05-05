@@ -18,10 +18,10 @@ router.get('/:id', (req, res) => {
     console.log('req.params: ', req.params);
     var clientId = req.params.id;
     console.log('clientIdddd: ', clientId);
-    Client.findById(clientId, (err, user) => {
+    Client.findById(clientId, (err, client) => {
         if (err) return res.status(400).send('errr: ', err);
-        console.log('userrrrr: ', user);
-        res.send(user);
+        console.log('userrrrr: ', client);
+        res.send(client);
     }).populate('properties');
 });
 

@@ -97,6 +97,7 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clie
             });
     }
 });
+
 app.filter('capitalize', function() {
     return function(str) {
         return (!!str) ? str.charAt(0).toUpperCase() + str.substr(1).toLowerCase() : '';
@@ -223,5 +224,45 @@ app.controller('propertiesCtrl', function($scope, Properties, $filter) {
         return totaluCost;
         console.log(totaluCost);
     }
+    $scope.getPropertyById = (propertyId) => {
+        console.log('getPropertyById: ', propertyId);
+    }
 
+});
+
+app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Properties) {
+    console.log('getPropertyByIdCtrl loaded');
+    // console.log('$stateParams: ', $stateParams.clientId);
+    console.log('$stateParams: ', $stateParams);
+    Properties.getPropertyById($stateParams.propertyId)
+        .then(function(property) {
+            console.log(property);
+            var property = property.data;
+            $scope.property = property;
+        }, function(err) {
+            console.log('err when get one property detail: ', err);
+        });
+
+    $scope.addClient = (propertyId, clientId) => {
+        console.log('propertyId: ', propertyId);
+        console.log('clientId: ', clientId);
+        Properties.addClient(propertyId, clientId)
+            .then(function(data) {
+                console.log('dataaaaaaaa 80: ', data);
+                // $scope.client.properties = client;
+            }, function(err) {
+                console.log('err when get one property detail: ', err);
+            });
+    }
+    $scope.removeClient = (propertyId, clientId) => {
+        console.log('propertyId: ', propertyId);
+        console.log('clientId: ', clientId);
+        // Properties.removeClient(propertyId, clientId)
+        //     .then(function(data) {
+        //         console.log('dataaaaaaaa 80: ', data);
+        //         // $scope.property.clients = property;
+        //     }, function(err) {
+        //         console.log('err when get one property detail: ', err);
+        //     });
+    }
 });

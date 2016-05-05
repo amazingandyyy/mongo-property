@@ -30,9 +30,9 @@ clientSchema.statics.addProperty = function(clientId, propertyId, cb) {
             console.log('property: ' ,property);
             var clientHasProperty = client.properties.indexOf(property._id) !== -1;
             var propertyHasClient = property.clients.indexOf(client._id) !== -1;
-            // if(clientHasProperty || propertyHasClient){
-            //     return cb();
-            // }
+            if(clientHasProperty || propertyHasClient){
+                return cb();
+            }
             console.log('propertyyyy: ', property);
             client.properties.push(property._id);
             console.log('client: ', client);

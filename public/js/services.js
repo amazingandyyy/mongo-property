@@ -42,6 +42,15 @@ app.service('Properties', function($http) {
     this.getAll = () => {
         return $http.get('/api/properties/');
     }
+    this.getPropertyById = (propertyId) => {
+        return $http.get(`/api/properties/${propertyId}`);
+    }
+    this.addClient = (propertyId, clientId) => {
+        return $http.put(`/api/properties/${propertyId}/addClient/${clientId}`);
+    }
+    this.removeClient = (propertyId, clientId) => {
+        return $http.delete(`/api/properties/${propertyId}/removeClient/${clientId}`);
+    }
     this.getAllByfilter = (rPriceMin,rPriceMax,uCostMin,uCostMax) => {
         return $http({
             method: 'GET',
