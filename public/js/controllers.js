@@ -66,13 +66,18 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clie
     console.log('getClientByIdCtrl loaded');
     // console.log('$stateParams: ', $stateParams.clientId);
     console.log('$stateParams: ', $stateParams);
-    Clients.getClientById($stateParams.clientId)
-        .then(function(client) {
-            var client = client.data;
-            $scope.client = client;
-        }, function(err) {
-            console.log('err when get one client detail: ', err);
-        });
+
+    getClientById();
+
+    function getClientById() {
+        Clients.getClientById($stateParams.clientId)
+            .then(function(client) {
+                var client = client.data;
+                $scope.client = client;
+            }, function(err) {
+                console.log('err when get one client detail: ', err);
+            });
+    }
 
     $scope.addProperty = (clientId, propertyId) => {
         console.log('clientId: ', clientId);
@@ -81,6 +86,7 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clie
             .then(function(data) {
                 console.log('dataaaaaaaa 80: ', data);
                 // $scope.client.properties = client;
+                getClientById();
             }, function(err) {
                 console.log('err when get one client detail: ', err);
             });
@@ -92,6 +98,7 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clie
             .then(function(data) {
                 console.log('dataaaaaaaa 80: ', data);
                 // $scope.client.properties = client;
+                getClientById();
             }, function(err) {
                 console.log('err when get one client detail: ', err);
             });
@@ -234,14 +241,34 @@ app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Pr
     console.log('getPropertyByIdCtrl loaded');
     // console.log('$stateParams: ', $stateParams.clientId);
     console.log('$stateParams: ', $stateParams);
-    Properties.getPropertyById($stateParams.propertyId)
-        .then(function(property) {
-            console.log(property);
-            var property = property.data;
-            $scope.property = property;
-        }, function(err) {
-            console.log('err when get one property detail: ', err);
-        });
+    getPropertyById();
+
+    function getPropertyById() {
+        Properties.getPropertyById($stateParams.propertyId)
+            .then(function(property) {
+                console.log(property);
+                var property = property.data;
+                $scope.property = property;
+                $scope.editOne = (index, id) => {
+                    $scope.edditedProperty = angular.copy($scope.properties[index]);
+                    $scope.edditedProperty.index = index;
+                }
+                $scope.edittedOne = (index, id) => {
+                    Properties.update(id, $scope.edditedProperty)
+                        .then(function(res) {
+                            $scope.properties[index] = $scope.edditedProperty;
+                            $scope.edditedProperty = null;
+                        }, function(err) {
+                            console.log('err: ', err);
+                        })
+                }
+                // if(property.length > 0){
+                //     $scope.property = ''
+                // }
+            }, function(err) {
+                console.log('err when get one property detail: ', err);
+            });
+    }
 
     $scope.addClient = (propertyId, clientId) => {
         console.log('propertyId: ', propertyId);
@@ -249,7 +276,7 @@ app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Pr
         Properties.addClient(propertyId, clientId)
             .then(function(data) {
                 console.log('dataaaaaaaa 80: ', data);
-                // $scope.client.properties = client;
+                getPropertyById();
             }, function(err) {
                 console.log('err when get one property detail: ', err);
             });
@@ -257,12 +284,12 @@ app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Pr
     $scope.removeClient = (propertyId, clientId) => {
         console.log('propertyId: ', propertyId);
         console.log('clientId: ', clientId);
-        // Properties.removeClient(propertyId, clientId)
-        //     .then(function(data) {
-        //         console.log('dataaaaaaaa 80: ', data);
-        //         // $scope.property.clients = property;
-        //     }, function(err) {
-        //         console.log('err when get one property detail: ', err);
-        //     });
+        Properties.removeClient(propertyId, clientId)
+            .then(function(data) {
+                console.log('dataaaaaaaa 80: ', data);
+                getPropertyById();
+            }, function(err) {
+                console.log('err when get one property detail: ', err);
+            });
     }
 });

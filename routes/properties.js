@@ -66,16 +66,17 @@ router.route('/:propertyId/addClient/:clientId')
         var clientId = req.params.clientId;
         console.log('propertyIdd: ', propertyId);
         console.log('clientIdd: ', clientId);
-        Properties.addClient(propertyId, clientId, err => {
+        Property.addClient(propertyId, clientId, err => {
             res.status(err ? 400 : 200).send(err)
         });
     })
+router.route('/:propertyId/removeClient/:clientId')
     .delete((req, res) => {
         var propertyId = req.params.propertyId;
         var clientId = req.params.clientId;
         console.log('propertyId: ', propertyId);
         console.log('clientId: ', clientId);
-        Properties.removeClient(propertyId, clientId, err => {
+        Property.removeClient(propertyId, clientId, err => {
             res.status(err ? 400 : 200).send(err)
         });
     });

@@ -43,6 +43,7 @@ router.route('/:clientId/addProperty/:propertyId')
             res.status(err ? 400 : 200).send(err)
         });
     })
+router.route('/:clientId/removeProperty/:propertyId')
     .delete((req, res) => {
         var clientId = req.params.clientId;
         var propertyId = req.params.propertyId;

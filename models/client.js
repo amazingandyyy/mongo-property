@@ -1,7 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var Property = require('./property');
+var Property = require('../models/property');
 
 
 var clientSchema = new mongoose.Schema({
@@ -21,7 +21,8 @@ var clientSchema = new mongoose.Schema({
 clientSchema.statics.addProperty = function(clientId, propertyId, cb) {
     console.log(propertyId);
     Client.findById(clientId, (err1, client) => {
-        Property.findOne({_id: propertyId}, (err2, property) => {
+        // console.log('Propertyyyy: ', Property);
+        mongoose.model('Property').findOne({_id: propertyId}, (err2, property) => {
             console.log('err1: ', err1);
             console.log('err2: ', err2);
             if (err1 || err2) return cb(err1 || err2);
@@ -44,7 +45,6 @@ clientSchema.statics.addProperty = function(clientId, propertyId, cb) {
                     cb(err1 || err2)
                 });
             });
-
         });
     });
 };
@@ -52,7 +52,7 @@ clientSchema.statics.addProperty = function(clientId, propertyId, cb) {
 clientSchema.statics.removeProperty = function(clientId, propertyId, cb) {
     console.log(propertyId);
     Client.findById(clientId, (err1, client) => {
-        Property.findOne({_id: propertyId}, (err2, property) => {
+        mongoose.model('Property').findOne({_id: propertyId}, (err2, property) => {
             console.log('err1: ', err1);
             console.log('err2: ', err2);
             if (err1 || err2) return cb(err1 || err2);

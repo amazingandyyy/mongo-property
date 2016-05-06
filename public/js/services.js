@@ -13,7 +13,7 @@ app.service('Clients', function($http) {
         return $http.put(`/api/clients/${clientId}/addProperty/${propertyId}`);
     }
     this.removeProperty = (clientId, propertyId) => {
-        return $http.delete(`/api/clients/${clientId}/addProperty/${propertyId}`);
+        return $http.delete(`/api/clients/${clientId}/removeProperty/${propertyId}`);
     }
     this.create = (newCard) => {
         return $http({
