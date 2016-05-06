@@ -85,9 +85,9 @@
         </div>
 
         <div class="col-xs-12 col-sm-9 col-md-10">
-            <br>
             <!-- <h4>{{showTotalNum()}} results found</h4> -->
             <h4>{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} properties found</h4>
+            <h6>{{(properties | filter: 'available' | filter: searchFilter).length}} available - {{(properties | filter: 'occupied' | filter: searchFilter).length}} occupied</h6>
             <!-- <h4>{{filteredProperties.length}} resultsss found</h4> -->
             <!-- <p>Total rent Price: {{showTotalrPrice() | currency: $}}</p> -->
             <!-- <p>Average rent Price: <b>{{showTotalrPrice() / (properties | filter: searchFilterByStatus).length | currency: $}}</b></p> -->
@@ -116,7 +116,7 @@
                             <td>{{property.uCost | currency: $}}</td>
                             <td>
                                 <button type="button" class="btn-xs btn btn-default btn-xs" ng-click="editOne(properties.indexOf(property), property._id)">Edit</button>
-                                <button type="button" class="btn-xs btn btn-success btn-xs" ui-sref="getPropertyById({propertyId: property._id})" ng-click="getPropertyById(property._id)" >Check details</button>
+                                <button type="button" class="btn-xs btn btn-success btn-xs" ui-sref="getPropertyById({propertyId: property._id})" ng-click="getPropertyById(property._id)">Check details</button>
                             </td>
                         </tr>
                     </tbody>

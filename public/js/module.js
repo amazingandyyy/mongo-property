@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp', ['ui.router']);
+var app = angular.module('myApp', ['ui.router','ui.bootstrap']);
 
 // localStorage.ngProductsList = [{'name': 'andy'}, {'yo': 'dd'}];
 // console.log('ddd: ', JSON.parse(localStorage.ngProductsList));

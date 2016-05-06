@@ -66,7 +66,6 @@ app.controller('getClientByIdCtrl', function($scope, $filter, $stateParams, Clie
     console.log('getClientByIdCtrl loaded');
     // console.log('$stateParams: ', $stateParams.clientId);
     console.log('$stateParams: ', $stateParams);
-
     getClientById();
 
     function getClientById() {

@@ -1,1570 +1,1765 @@
-[
-  {
-    "_id": "57296df8479e32990829bc79",
+[{
+    "_id": {
+        "$oid": "57296df8479e32990829bc79"
+    },
     "name": "Cinesanct",
     "address": "955 Hale Avenue, Fostoria, California, 3693",
     "oStatus": "occupied",
     "rPrice": 3309,
     "uCost": 299
-  },
-  {
-    "_id": "57296df85fb677f6ac8d0829",
+}, {
+    "_id": {
+        "$oid": "57296df85fb677f6ac8d0829"
+    },
     "name": "Talkalot",
     "address": "682 Prospect Place, Rosburg, Idaho, 7460",
     "oStatus": "occupied",
     "rPrice": 1937,
     "uCost": 346
-  },
-  {
-    "_id": "57296df86dddc2bb3aec6255",
+}, {
+    "_id": {
+        "$oid": "57296df86dddc2bb3aec6255"
+    },
     "name": "Netility",
     "address": "692 Livingston Street, Mooresburg, Guam, 3732",
     "oStatus": "available",
     "rPrice": 1307,
     "uCost": 997
-  },
-  {
-    "_id": "57296df88b934b3d3d6c40ba",
+}, {
+    "_id": {
+        "$oid": "57296df88b934b3d3d6c40ba"
+    },
     "name": "Deepends",
     "address": "984 Times Placez, Woodburn, Federated States Of Micronesia, 5469",
     "oStatus": "available",
     "rPrice": 1822,
     "uCost": 209
-  },
-  {
-    "_id": "57296df86eba3a406f191607",
+}, {
+    "_id": {
+        "$oid": "57296df86eba3a406f191607"
+    },
     "name": "Imaginart",
     "address": "677 Pooles Lane, Longbranch, North Dakota, 6277",
     "oStatus": "available",
     "rPrice": 2921,
     "uCost": 713
-  },
-  {
-    "_id": "57296df8b2c9434548b73d19",
+}, {
+    "_id": {
+        "$oid": "57296df8b2c9434548b73d19"
+    },
     "name": "Delphide",
     "address": "155 Marconi Place, Callaghan, Kansas, 2699",
     "oStatus": "available",
     "rPrice": 2606,
     "uCost": 797
-  },
-  {
-    "_id": "57296df89c0efd1c692905cd",
+}, {
+    "_id": {
+        "$oid": "57296df89c0efd1c692905cd"
+    },
     "name": "Comtent",
     "address": "322 Downing Street, Harrison, Illinois, 5386",
     "oStatus": "available",
     "rPrice": 2930,
     "uCost": 416
-  },
-  {
-    "_id": "57296df8dfde5bffda9d7c2a",
+}, {
+    "_id": {
+        "$oid": "57296df8dfde5bffda9d7c2a"
+    },
     "name": "Earthmark",
     "address": "941 Lloyd Street, Biehle, American Samoa, 4846",
     "oStatus": "occupied",
     "rPrice": 3522,
     "uCost": 482
-  },
-  {
-    "_id": "57296df8e14ac3d7c1f03873",
+}, {
+    "_id": {
+        "$oid": "57296df8e14ac3d7c1f03873"
+    },
     "name": "Isonus",
     "address": "370 Winthrop Street, Fairmount, Ohio, 1970",
     "oStatus": "available",
     "rPrice": 2611,
     "uCost": 988
-  },
-  {
-    "_id": "57296df8e26d635fbe1e4563",
+}, {
+    "_id": {
+        "$oid": "57296df8e26d635fbe1e4563"
+    },
     "name": "Indexia",
     "address": "741 Beekman Place, Greenbush, New Mexico, 8655",
     "oStatus": "available",
     "rPrice": 3777,
     "uCost": 478
-  },
-  {
-    "_id": "57296df8b42cd1ef0f0ab62e",
+}, {
+    "_id": {
+        "$oid": "57296df8b42cd1ef0f0ab62e"
+    },
     "name": "Providco",
     "address": "733 Graham Avenue, Lodoga, Marshall Islands, 4105",
     "oStatus": "available",
     "rPrice": 1077,
     "uCost": 215
-  },
-  {
-    "_id": "57296df87ec75d17464e829a",
+}, {
+    "_id": {
+        "$oid": "57296df87ec75d17464e829a"
+    },
     "name": "Qaboos",
     "address": "316 Taylor Street, Dyckesville, Hawaii, 4290",
     "oStatus": "occupied",
     "rPrice": 3347,
     "uCost": 731
-  },
-  {
-    "_id": "57296df8f686410d70ab6daf",
+}, {
+    "_id": {
+        "$oid": "57296df8f686410d70ab6daf"
+    },
     "name": "Entogrok",
     "address": "124 Ebony Court, Mulino, Iowa, 8572",
     "oStatus": "occupied",
     "rPrice": 3628,
     "uCost": 774
-  },
-  {
-    "_id": "57296df8a404052c4c9c4cb4",
+}, {
+    "_id": {
+        "$oid": "57296df8a404052c4c9c4cb4"
+    },
     "name": "Freakin",
     "address": "104 Dumont Avenue, Kempton, Massachusetts, 8459",
     "oStatus": "occupied",
     "rPrice": 3608,
     "uCost": 979
-  },
-  {
-    "_id": "57296df8a467ffb1c4f5b55a",
+}, {
+    "_id": {
+        "$oid": "57296df8a467ffb1c4f5b55a"
+    },
     "name": "Unq",
     "address": "167 Holt Court, Newkirk, Florida, 5635",
     "oStatus": "available",
     "rPrice": 2894,
     "uCost": 968
-  },
-  {
-    "_id": "57296df851487ed4058ee881",
+}, {
+    "_id": {
+        "$oid": "57296df851487ed4058ee881"
+    },
     "name": "Nipaz",
     "address": "459 Eldert Lane, Loma, Arizona, 7056",
     "oStatus": "occupied",
     "rPrice": 1244,
     "uCost": 315
-  },
-  {
-    "_id": "57296df8d6376c7719ab2ef9",
+}, {
+    "_id": {
+        "$oid": "57296df8d6376c7719ab2ef9"
+    },
     "name": "Hotcakes",
     "address": "193 Freeman Street, Fairlee, Texas, 7427",
     "oStatus": "available",
     "rPrice": 2537,
     "uCost": 492
-  },
-  {
-    "_id": "57296df8708993b1d6dbc2c5",
+}, {
+    "_id": {
+        "$oid": "57296df8708993b1d6dbc2c5"
+    },
     "name": "Xoggle",
     "address": "465 Monaco Place, Leola, Alaska, 3132",
     "oStatus": "occupied",
     "rPrice": 716,
     "uCost": 590
-  },
-  {
-    "_id": "57296df84a435a2f3fa0c533",
+}, {
+    "_id": {
+        "$oid": "57296df84a435a2f3fa0c533"
+    },
     "name": "Comdom",
     "address": "376 Pitkin Avenue, Turpin, Georgia, 5857",
     "oStatus": "available",
     "rPrice": 1297,
     "uCost": 658
-  },
-  {
-    "_id": "57296df8125ca7b4df1c98a2",
+}, {
+    "_id": {
+        "$oid": "57296df8125ca7b4df1c98a2"
+    },
     "name": "Remotion",
     "address": "852 Fleet Street, Mayfair, Virginia, 6045",
     "oStatus": "available",
     "rPrice": 2948,
     "uCost": 685
-  },
-  {
-    "_id": "57296df82272d253697f4e6a",
+}, {
+    "_id": {
+        "$oid": "57296df82272d253697f4e6a"
+    },
     "name": "Aeora",
     "address": "111 Jardine Place, Canterwood, Oregon, 7354",
     "oStatus": "occupied",
     "rPrice": 3582,
     "uCost": 871
-  },
-  {
-    "_id": "57296df8c39160eaf0e7ba02",
+}, {
+    "_id": {
+        "$oid": "57296df8c39160eaf0e7ba02"
+    },
     "name": "Grupoli",
     "address": "593 Hillel Place, Concho, Colorado, 1907",
     "oStatus": "available",
     "rPrice": 1465,
     "uCost": 936
-  },
-  {
-    "_id": "57296df8b240e96dc5e26abf",
+}, {
+    "_id": {
+        "$oid": "57296df8b240e96dc5e26abf"
+    },
     "name": "Genmy",
     "address": "279 Suydam Street, Hemlock, Indiana, 6901",
     "oStatus": "occupied",
     "rPrice": 888,
     "uCost": 132
-  },
-  {
-    "_id": "57296df811dc37ce0ba4df0c",
+}, {
+    "_id": {
+        "$oid": "57296df811dc37ce0ba4df0c"
+    },
     "name": "Furnafix",
     "address": "305 Henderson Walk, Marbury, Kentucky, 7517",
     "oStatus": "occupied",
     "rPrice": 1239,
     "uCost": 281
-  },
-  {
-    "_id": "57296df8b955b2ec04359322",
+}, {
+    "_id": {
+        "$oid": "57296df8b955b2ec04359322"
+    },
     "name": "Sunclipse",
     "address": "765 Johnson Avenue, Tivoli, Mississippi, 7271",
     "oStatus": "available",
     "rPrice": 760,
     "uCost": 176
-  },
-  {
-    "_id": "57296df88ec09077dad79eb4",
+}, {
+    "_id": {
+        "$oid": "57296df88ec09077dad79eb4"
+    },
     "name": "Kengen",
     "address": "448 Brown Street, Snowville, Vermont, 9058",
     "oStatus": "occupied",
     "rPrice": 2535,
     "uCost": 842
-  },
-  {
-    "_id": "57296df8efe3a54120d85747",
+}, {
+    "_id": {
+        "$oid": "57296df8efe3a54120d85747"
+    },
     "name": "Insurity",
     "address": "290 Broadway , Templeton, Pennsylvania, 2426",
     "oStatus": "available",
     "rPrice": 2723,
     "uCost": 686
-  },
-  {
-    "_id": "57296df8a2663b2a44185978",
+}, {
+    "_id": {
+        "$oid": "57296df8a2663b2a44185978"
+    },
     "name": "Newcube",
     "address": "434 Wilson Street, Statenville, Wisconsin, 1308",
     "oStatus": "available",
     "rPrice": 2043,
     "uCost": 713
-  },
-  {
-    "_id": "57296df84fc107521e82eec2",
+}, {
+    "_id": {
+        "$oid": "57296df84fc107521e82eec2"
+    },
     "name": "Pulze",
     "address": "784 Doughty Street, Jardine, District Of Columbia, 9716",
     "oStatus": "occupied",
     "rPrice": 828,
     "uCost": 911
-  },
-  {
-    "_id": "57296df8c0b42743f255ab12",
+}, {
+    "_id": {
+        "$oid": "57296df8c0b42743f255ab12"
+    },
     "name": "Talkola",
     "address": "261 Chase Court, Columbus, Puerto Rico, 4620",
     "oStatus": "available",
     "rPrice": 3822,
     "uCost": 630
-  },
-  {
-    "_id": "57296df8449f311eac7fc74a",
+}, {
+    "_id": {
+        "$oid": "57296df8449f311eac7fc74a"
+    },
     "name": "Mazuda",
     "address": "149 Main Street, Coyote, Virgin Islands, 9431",
     "oStatus": "available",
     "rPrice": 2962,
     "uCost": 409
-  },
-  {
-    "_id": "57296df800084453e27446ce",
+}, {
+    "_id": {
+        "$oid": "57296df800084453e27446ce"
+    },
     "name": "Pholio",
     "address": "423 Homecrest Court, Ada, Alabama, 1547",
     "oStatus": "occupied",
     "rPrice": 2425,
     "uCost": 997
-  },
-  {
-    "_id": "57296df8bc2bebb76676b0a1",
+}, {
+    "_id": {
+        "$oid": "57296df8bc2bebb76676b0a1"
+    },
     "name": "Snips",
     "address": "573 King Street, Elwood, Utah, 6917",
     "oStatus": "available",
     "rPrice": 676,
     "uCost": 719
-  },
-  {
-    "_id": "57296df8d4d85a52e9bac0ae",
+}, {
+    "_id": {
+        "$oid": "57296df8d4d85a52e9bac0ae"
+    },
     "name": "Ovium",
     "address": "572 Debevoise Street, Strong, Rhode Island, 9050",
     "oStatus": "available",
     "rPrice": 804,
     "uCost": 409
-  },
-  {
-    "_id": "57296df8113db90c9464d16e",
+}, {
+    "_id": {
+        "$oid": "57296df8113db90c9464d16e"
+    },
     "name": "Recognia",
     "address": "960 Grand Avenue, Nettie, Minnesota, 5384",
     "oStatus": "occupied",
     "rPrice": 3453,
     "uCost": 289
-  },
-  {
-    "_id": "57296df840ff7e325a48d09a",
+}, {
+    "_id": {
+        "$oid": "57296df840ff7e325a48d09a"
+    },
     "name": "Enersave",
     "address": "181 Sapphire Street, Harmon, South Dakota, 7850",
     "oStatus": "available",
     "rPrice": 2115,
     "uCost": 845
-  },
-  {
-    "_id": "57296df8a1dc2ffc615f1332",
+}, {
+    "_id": {
+        "$oid": "57296df8a1dc2ffc615f1332"
+    },
     "name": "Bleeko",
     "address": "564 Butler Street, Crayne, Tennessee, 5384",
     "oStatus": "occupied",
     "rPrice": 2173,
     "uCost": 800
-  },
-  {
-    "_id": "57296df8a5ed3c6eb807543a",
+}, {
+    "_id": {
+        "$oid": "57296df8a5ed3c6eb807543a"
+    },
     "name": "Hairport",
     "address": "155 Caton Avenue, Eagleville, New Hampshire, 9218",
     "oStatus": "occupied",
     "rPrice": 3785,
     "uCost": 946
-  },
-  {
-    "_id": "57296df850c90e4b3257b57b",
+}, {
+    "_id": {
+        "$oid": "57296df850c90e4b3257b57b"
+    },
     "name": "Hometown",
     "address": "426 Kermit Place, Crumpler, Palau, 1276",
     "oStatus": "available",
     "rPrice": 482,
     "uCost": 823
-  },
-  {
-    "_id": "57296df8523844b23c4f4867",
+}, {
+    "_id": {
+        "$oid": "57296df8523844b23c4f4867"
+    },
     "name": "Primordia",
     "address": "547 Sheffield Avenue, Homestead, Missouri, 2214",
     "oStatus": "available",
     "rPrice": 1369,
     "uCost": 542
-  },
-  {
-    "_id": "57296df88ef6778b736c6361",
+}, {
+    "_id": {
+        "$oid": "57296df88ef6778b736c6361"
+    },
     "name": "Zentility",
     "address": "904 Townsend Street, Kimmell, New York, 2754",
     "oStatus": "available",
     "rPrice": 3665,
     "uCost": 232
-  },
-  {
-    "_id": "57296df81dc37e687c1b1761",
+}, {
+    "_id": {
+        "$oid": "57296df81dc37e687c1b1761"
+    },
     "name": "Elpro",
     "address": "215 Stockton Street, Urie, New Jersey, 4845",
     "oStatus": "occupied",
     "rPrice": 3390,
     "uCost": 340
-  },
-  {
-    "_id": "57296df852a2d91a811acece",
+}, {
+    "_id": {
+        "$oid": "57296df852a2d91a811acece"
+    },
     "name": "Recritube",
     "address": "246 Waldane Court, Fairview, Nebraska, 5600",
     "oStatus": "occupied",
     "rPrice": 2862,
     "uCost": 996
-  },
-  {
-    "_id": "57296df856f307457d5dfc77",
+}, {
+    "_id": {
+        "$oid": "57296df856f307457d5dfc77"
+    },
     "name": "Insuresys",
     "address": "476 Oriental Boulevard, Dotsero, Maryland, 6062",
     "oStatus": "available",
     "rPrice": 2690,
     "uCost": 149
-  },
-  {
-    "_id": "57296df8d14e4e936176e2ec",
+}, {
+    "_id": {
+        "$oid": "57296df8d14e4e936176e2ec"
+    },
     "name": "Remold",
     "address": "302 Manhattan Avenue, Shelby, Delaware, 822",
     "oStatus": "occupied",
     "rPrice": 3765,
     "uCost": 193
-  },
-  {
-    "_id": "57296df84fae807d46e2168f",
+}, {
+    "_id": {
+        "$oid": "57296df84fae807d46e2168f"
+    },
     "name": "Isosure",
     "address": "408 Banner Avenue, Foxworth, Michigan, 7909",
     "oStatus": "available",
     "rPrice": 2019,
     "uCost": 558
-  },
-  {
-    "_id": "57296df86d32e6dd618ba0d6",
+}, {
+    "_id": {
+        "$oid": "57296df86d32e6dd618ba0d6"
+    },
     "name": "Tropoli",
     "address": "317 Luquer Street, Zortman, West Virginia, 1763",
     "oStatus": "available",
     "rPrice": 2105,
     "uCost": 99
-  },
-  {
-    "_id": "57296df8aa6d63bbeeb02155",
+}, {
+    "_id": {
+        "$oid": "57296df8aa6d63bbeeb02155"
+    },
     "name": "Maximind",
     "address": "362 Hopkins Street, Kennedyville, Oklahoma, 9575",
     "oStatus": "available",
     "rPrice": 2851,
     "uCost": 587
-  },
-  {
-    "_id": "57296df8e11340c062be6366",
+}, {
+    "_id": {
+        "$oid": "57296df8e11340c062be6366"
+    },
     "name": "Endipine",
     "address": "872 Mill Road, Canoochee, South Carolina, 5841",
     "oStatus": "occupied",
     "rPrice": 3118,
     "uCost": 721
-  },
-  {
-    "_id": "57296df8fcf597599991ff2f",
+}, {
+    "_id": {
+        "$oid": "57296df8fcf597599991ff2f"
+    },
     "name": "Slofast",
     "address": "609 Kenilworth Place, Eagletown, Arkansas, 5056",
     "oStatus": "available",
     "rPrice": 770,
     "uCost": 704
-  },
-  {
-    "_id": "57296df8ecc8a801537f1f68",
+}, {
+    "_id": {
+        "$oid": "57296df8ecc8a801537f1f68"
+    },
     "name": "Rockyard",
     "address": "711 Devoe Street, Hiseville, Northern Mariana Islands, 9307",
     "oStatus": "occupied",
     "rPrice": 1108,
     "uCost": 769
-  },
-  {
-    "_id": "57296df861cfa81dc72d4ba9",
+}, {
+    "_id": {
+        "$oid": "57296df861cfa81dc72d4ba9"
+    },
     "name": "Niquent",
     "address": "778 Canda Avenue, Belva, North Carolina, 1676",
     "oStatus": "available",
     "rPrice": 3853,
     "uCost": 948
-  },
-  {
-    "_id": "57296df811b0819b630fe252",
+}, {
+    "_id": {
+        "$oid": "57296df811b0819b630fe252"
+    },
     "name": "Zyple",
     "address": "396 Rapelye Street, Aberdeen, Washington, 1239",
     "oStatus": "available",
     "rPrice": 600,
     "uCost": 989
-  },
-  {
-    "_id": "57296df86c512e3c162b9592",
+}, {
+    "_id": {
+        "$oid": "57296df86c512e3c162b9592"
+    },
     "name": "Tubesys",
     "address": "623 Independence Avenue, Fresno, Louisiana, 6313",
     "oStatus": "occupied",
     "rPrice": 3820,
     "uCost": 974
-  },
-  {
-    "_id": "57296df817d9ff8061516c2e",
+}, {
+    "_id": {
+        "$oid": "57296df817d9ff8061516c2e"
+    },
     "name": "Kiggle",
     "address": "284 Arion Place, Curtice, Connecticut, 5203",
     "oStatus": "occupied",
     "rPrice": 763,
     "uCost": 743
-  },
-  {
-    "_id": "57296df89584369187928f8e",
+}, {
+    "_id": {
+        "$oid": "57296df89584369187928f8e"
+    },
     "name": "Sybixtex",
     "address": "936 Meadow Street, Dexter, Montana, 7172",
     "oStatus": "available",
     "rPrice": 993,
     "uCost": 105
-  },
-  {
-    "_id": "57296df8fb059d91997c6296",
+}, {
+    "_id": {
+        "$oid": "57296df8fb059d91997c6296"
+    },
     "name": "Intrawear",
     "address": "898 Dahlgreen Place, Norris, Nevada, 2082",
     "oStatus": "occupied",
     "rPrice": 815,
     "uCost": 846
-  },
-  {
-    "_id": "57296df87c26f2a59df67d55",
+}, {
+    "_id": {
+        "$oid": "57296df87c26f2a59df67d55"
+    },
     "name": "Eplosion",
     "address": "650 Engert Avenue, Bourg, Maine, 312",
     "oStatus": "available",
     "rPrice": 1897,
     "uCost": 72
-  },
-  {
-    "_id": "57296df82e176fa5f67d9eda",
+}, {
+    "_id": {
+        "$oid": "57296df82e176fa5f67d9eda"
+    },
     "name": "Fleetmix",
     "address": "990 Highland Place, Bentonville, California, 8250",
     "oStatus": "available",
     "rPrice": 1429,
     "uCost": 779
-  },
-  {
-    "_id": "57296df823a0b7f38cec6fdb",
+}, {
+    "_id": {
+        "$oid": "57296df823a0b7f38cec6fdb"
+    },
     "name": "Comtrek",
     "address": "374 Oceanic Avenue, Bluetown, Idaho, 3502",
     "oStatus": "occupied",
     "rPrice": 412,
     "uCost": 947
-  },
-  {
-    "_id": "57296df845416ba3d326f20c",
+}, {
+    "_id": {
+        "$oid": "57296df845416ba3d326f20c"
+    },
     "name": "Limage",
     "address": "879 Farragut Place, Hoehne, Guam, 7349",
     "oStatus": "occupied",
     "rPrice": 2223,
     "uCost": 717
-  },
-  {
-    "_id": "57296df8150baec9f79dcc1b",
+}, {
+    "_id": {
+        "$oid": "57296df8150baec9f79dcc1b"
+    },
     "name": "Musaphics",
     "address": "894 Albemarle Terrace, Layhill, Federated States Of Micronesia, 1057",
     "oStatus": "available",
     "rPrice": 2382,
     "uCost": 262
-  },
-  {
-    "_id": "57296df80acf4b644e075679",
+}, {
+    "_id": {
+        "$oid": "57296df80acf4b644e075679"
+    },
     "name": "Melbacor",
     "address": "538 Lois Avenue, Floris, North Dakota, 3182",
     "oStatus": "available",
     "rPrice": 3119,
     "uCost": 352
-  },
-  {
-    "_id": "57296df8fc13de67f120ef76",
+}, {
+    "_id": {
+        "$oid": "57296df8fc13de67f120ef76"
+    },
     "name": "Geekology",
     "address": "236 Bergen Street, Madrid, Kansas, 1965",
     "oStatus": "available",
     "rPrice": 1838,
     "uCost": 966
-  },
-  {
-    "_id": "57296df8bd316edcb77f8e1b",
+}, {
+    "_id": {
+        "$oid": "57296df8bd316edcb77f8e1b"
+    },
     "name": "Uxmox",
     "address": "415 Plaza Street, Tampico, Illinois, 745",
     "oStatus": "occupied",
     "rPrice": 2858,
     "uCost": 528
-  },
-  {
-    "_id": "57296df85b3082db31217440",
+}, {
+    "_id": {
+        "$oid": "57296df85b3082db31217440"
+    },
     "name": "Chorizon",
     "address": "271 Knapp Street, Ola, American Samoa, 5407",
     "oStatus": "occupied",
     "rPrice": 1883,
     "uCost": 226
-  },
-  {
-    "_id": "57296df8a285b4ed63dde86e",
+}, {
+    "_id": {
+        "$oid": "57296df8a285b4ed63dde86e"
+    },
     "name": "Pharmacon",
     "address": "141 Dobbin Street, Belmont, Ohio, 1748",
     "oStatus": "occupied",
     "rPrice": 3318,
     "uCost": 769
-  },
-  {
-    "_id": "57296df8c95aeaeb02a29a55",
+}, {
+    "_id": {
+        "$oid": "57296df8c95aeaeb02a29a55"
+    },
     "name": "Assurity",
     "address": "315 Balfour Place, Warren, New Mexico, 5022",
     "oStatus": "available",
     "rPrice": 1121,
     "uCost": 717
-  },
-  {
-    "_id": "57296df8f3a50a1741d4fb1b",
+}, {
+    "_id": {
+        "$oid": "57296df8f3a50a1741d4fb1b"
+    },
     "name": "Applica",
     "address": "443 Newel Street, Yorklyn, Marshall Islands, 9176",
     "oStatus": "available",
     "rPrice": 1287,
     "uCost": 44
-  },
-  {
-    "_id": "57296df83aae6d035821de83",
+}, {
+    "_id": {
+        "$oid": "57296df83aae6d035821de83"
+    },
     "name": "Aquacine",
     "address": "739 Raleigh Place, Elfrida, Hawaii, 9402",
     "oStatus": "occupied",
     "rPrice": 3315,
     "uCost": 792
-  },
-  {
-    "_id": "57296df81add7ea0209c8c1e",
+}, {
+    "_id": {
+        "$oid": "57296df81add7ea0209c8c1e"
+    },
     "name": "Aquamate",
     "address": "795 Gerald Court, Bellamy, Iowa, 4709",
     "oStatus": "occupied",
     "rPrice": 820,
     "uCost": 326
-  },
-  {
-    "_id": "57296df84f766e198da6c597",
+}, {
+    "_id": {
+        "$oid": "57296df84f766e198da6c597"
+    },
     "name": "Skybold",
     "address": "330 Hazel Court, Manitou, Massachusetts, 8252",
     "oStatus": "available",
     "rPrice": 3264,
     "uCost": 34
-  },
-  {
-    "_id": "57296df8584e2bb4a7ec8f0c",
+}, {
+    "_id": {
+        "$oid": "57296df8584e2bb4a7ec8f0c"
+    },
     "name": "Snorus",
     "address": "731 Barwell Terrace, Thynedale, Florida, 5811",
     "oStatus": "available",
     "rPrice": 2798,
     "uCost": 615
-  },
-  {
-    "_id": "57296df8912318a6108f86b7",
+}, {
+    "_id": {
+        "$oid": "57296df8912318a6108f86b7"
+    },
     "name": "Kaggle",
     "address": "175 Elton Street, Cedarville, Arizona, 786",
     "oStatus": "occupied",
     "rPrice": 2918,
     "uCost": 203
-  },
-  {
-    "_id": "57296df86f5a26d8b54293c5",
+}, {
+    "_id": {
+        "$oid": "57296df86f5a26d8b54293c5"
+    },
     "name": "Flotonic",
     "address": "404 Seagate Terrace, Oneida, Texas, 3866",
     "oStatus": "occupied",
     "rPrice": 926,
     "uCost": 94
-  },
-  {
-    "_id": "57296df8667dec8272d82de7",
+}, {
+    "_id": {
+        "$oid": "57296df8667dec8272d82de7"
+    },
     "name": "Opticon",
     "address": "295 Harkness Avenue, Riner, Alaska, 1199",
     "oStatus": "occupied",
     "rPrice": 3807,
     "uCost": 840
-  },
-  {
-    "_id": "57296df8c16696f7db6f53b2",
+}, {
+    "_id": {
+        "$oid": "57296df8c16696f7db6f53b2"
+    },
     "name": "Zensure",
     "address": "718 Quentin Street, Henrietta, Georgia, 7618",
     "oStatus": "available",
     "rPrice": 1029,
     "uCost": 116
-  },
-  {
-    "_id": "57296df8e85e7705c513b06c",
+}, {
+    "_id": {
+        "$oid": "57296df8e85e7705c513b06c"
+    },
     "name": "Talendula",
     "address": "334 Carlton Avenue, Grantville, Virginia, 2043",
     "oStatus": "available",
     "rPrice": 736,
     "uCost": 282
-  },
-  {
-    "_id": "57296df8b4bc65e0d33fc4f0",
+}, {
+    "_id": {
+        "$oid": "57296df8b4bc65e0d33fc4f0"
+    },
     "name": "Applideck",
     "address": "883 Varet Street, Silkworth, Oregon, 6729",
     "oStatus": "available",
     "rPrice": 3838,
     "uCost": 241
-  },
-  {
-    "_id": "57296df8304aa0cd18413eb8",
+}, {
+    "_id": {
+        "$oid": "57296df8304aa0cd18413eb8"
+    },
     "name": "Isodrive",
     "address": "716 Dooley Street, Cascades, Colorado, 3204",
     "oStatus": "available",
     "rPrice": 835,
     "uCost": 213
-  },
-  {
-    "_id": "57296df836e6ccb3c3d87880",
+}, {
+    "_id": {
+        "$oid": "57296df836e6ccb3c3d87880"
+    },
     "name": "Momentia",
     "address": "133 Emerald Street, Flintville, Indiana, 7835",
     "oStatus": "occupied",
     "rPrice": 3142,
     "uCost": 986
-  },
-  {
-    "_id": "57296df8ca7f06915caf9175",
+}, {
+    "_id": {
+        "$oid": "57296df8ca7f06915caf9175"
+    },
     "name": "Opticall",
     "address": "926 Norman Avenue, Ticonderoga, Kentucky, 2580",
     "oStatus": "occupied",
     "rPrice": 3164,
     "uCost": 617
-  },
-  {
-    "_id": "57296df80fe51331e6fb2f2c",
+}, {
+    "_id": {
+        "$oid": "57296df80fe51331e6fb2f2c"
+    },
     "name": "Cedward",
     "address": "810 Cobek Court, Fairacres, Mississippi, 4172",
     "oStatus": "available",
     "rPrice": 1517,
     "uCost": 151
-  },
-  {
-    "_id": "57296df8d499d5d26843d6f8",
+}, {
+    "_id": {
+        "$oid": "57296df8d499d5d26843d6f8"
+    },
     "name": "Panzent",
     "address": "219 McKinley Avenue, Edinburg, Vermont, 8600",
     "oStatus": "available",
     "rPrice": 3752,
     "uCost": 451
-  },
-  {
-    "_id": "57296df83c929c482461ceee",
+}, {
+    "_id": {
+        "$oid": "57296df83c929c482461ceee"
+    },
     "name": "Exiand",
     "address": "175 Beaumont Street, Weogufka, Pennsylvania, 3682",
     "oStatus": "available",
     "rPrice": 703,
     "uCost": 139
-  },
-  {
-    "_id": "57296df881310b3a0201f48f",
+}, {
+    "_id": {
+        "$oid": "57296df881310b3a0201f48f"
+    },
     "name": "Qot",
     "address": "750 Knickerbocker Avenue, Juntura, Wisconsin, 4676",
     "oStatus": "occupied",
     "rPrice": 441,
     "uCost": 43
-  },
-  {
-    "_id": "57296df8164f0291b12c66be",
+}, {
+    "_id": {
+        "$oid": "57296df8164f0291b12c66be"
+    },
     "name": "Phormula",
     "address": "717 Hendrix Street, Bainbridge, District Of Columbia, 3409",
     "oStatus": "available",
     "rPrice": 3263,
     "uCost": 110
-  },
-  {
-    "_id": "57296df8b179dd95f33c3585",
+}, {
+    "_id": {
+        "$oid": "57296df8b179dd95f33c3585"
+    },
     "name": "Ebidco",
     "address": "755 Bainbridge Street, Goodville, Puerto Rico, 5109",
     "oStatus": "available",
     "rPrice": 3551,
     "uCost": 40
-  },
-  {
-    "_id": "57296df8ac6386b08961d010",
+}, {
+    "_id": {
+        "$oid": "57296df8ac6386b08961d010"
+    },
     "name": "Scenty",
     "address": "594 Matthews Court, Goochland, Virgin Islands, 4136",
     "oStatus": "occupied",
     "rPrice": 2653,
     "uCost": 639
-  },
-  {
-    "_id": "57296df8bd67a4a880a74b99",
+}, {
+    "_id": {
+        "$oid": "57296df8bd67a4a880a74b99"
+    },
     "name": "Corpulse",
     "address": "614 Amity Street, Klondike, Alabama, 3422",
     "oStatus": "occupied",
     "rPrice": 555,
     "uCost": 517
-  },
-  {
-    "_id": "57296df8be02ef484e28e9cd",
+}, {
+    "_id": {
+        "$oid": "57296df8be02ef484e28e9cd"
+    },
     "name": "Uncorp",
     "address": "814 Howard Place, Edmund, Utah, 6729",
     "oStatus": "occupied",
     "rPrice": 3146,
     "uCost": 87
-  },
-  {
-    "_id": "57296df8ed7fd0374ad966a7",
+}, {
+    "_id": {
+        "$oid": "57296df8ed7fd0374ad966a7"
+    },
     "name": "Boilcat",
     "address": "726 Melba Court, Haena, Rhode Island, 400",
     "oStatus": "occupied",
     "rPrice": 2312,
     "uCost": 735
-  },
-  {
-    "_id": "57296df850c4d40cfbe5659e",
+}, {
+    "_id": {
+        "$oid": "57296df850c4d40cfbe5659e"
+    },
     "name": "Naxdis",
     "address": "832 Sackman Street, Hegins, Minnesota, 5680",
     "oStatus": "available",
     "rPrice": 964,
     "uCost": 569
-  },
-  {
-    "_id": "57296df8c330ebc2ae2c1074",
+}, {
+    "_id": {
+        "$oid": "57296df8c330ebc2ae2c1074"
+    },
     "name": "Bleendot",
     "address": "174 Cozine Avenue, Oasis, South Dakota, 9536",
     "oStatus": "occupied",
     "rPrice": 467,
     "uCost": 571
-  },
-  {
-    "_id": "57296df867ebf64fd6ad211d",
+}, {
+    "_id": {
+        "$oid": "57296df867ebf64fd6ad211d"
+    },
     "name": "Zoxy",
     "address": "998 Glen Street, Ferney, Tennessee, 1641",
     "oStatus": "occupied",
     "rPrice": 1624,
     "uCost": 155
-  },
-  {
-    "_id": "57296df8511c2242068b09a5",
+}, {
+    "_id": {
+        "$oid": "57296df8511c2242068b09a5"
+    },
     "name": "Comstar",
     "address": "651 Tilden Avenue, Harrodsburg, New Hampshire, 4377",
     "oStatus": "available",
     "rPrice": 2875,
     "uCost": 987
-  },
-  {
-    "_id": "57296df82e3a7beb3134e571",
+}, {
+    "_id": {
+        "$oid": "57296df82e3a7beb3134e571"
+    },
     "name": "Fishland",
     "address": "345 Llama Court, Cartwright, Palau, 6592",
     "oStatus": "available",
     "rPrice": 2054,
     "uCost": 428
-  },
-  {
-    "_id": "57296df83e02b55a7c267412",
+}, {
+    "_id": {
+        "$oid": "57296df83e02b55a7c267412"
+    },
     "name": "Bytrex",
     "address": "401 Herbert Street, Urbana, Missouri, 8667",
     "oStatus": "occupied",
     "rPrice": 2044,
     "uCost": 439
-  },
-  {
-    "_id": "57296df847b24f882a6ad7a2",
+}, {
+    "_id": {
+        "$oid": "57296df847b24f882a6ad7a2"
+    },
     "name": "Gogol",
     "address": "311 Ocean Court, Cazadero, New York, 9142",
     "oStatus": "occupied",
     "rPrice": 3458,
     "uCost": 338
-  },
-  {
-    "_id": "57296df8c8ddb594972e8daf",
+}, {
+    "_id": {
+        "$oid": "57296df8c8ddb594972e8daf"
+    },
     "name": "Verton",
     "address": "736 Rogers Avenue, Ernstville, New Jersey, 1409",
     "oStatus": "occupied",
     "rPrice": 2724,
     "uCost": 845
-  },
-  {
-    "_id": "57296df8cbd9496150ca1c7b",
+}, {
+    "_id": {
+        "$oid": "57296df8cbd9496150ca1c7b"
+    },
     "name": "Slambda",
     "address": "106 Evans Street, Drytown, Nebraska, 1193",
     "oStatus": "occupied",
     "rPrice": 3135,
     "uCost": 58
-  },
-  {
-    "_id": "57296df86e8f3ae8e5493f33",
+}, {
+    "_id": {
+        "$oid": "57296df86e8f3ae8e5493f33"
+    },
     "name": "Deviltoe",
     "address": "969 Erskine Loop, Boykin, Maryland, 4287",
     "oStatus": "available",
     "rPrice": 3134,
     "uCost": 560
-  },
-  {
-    "_id": "57296df8e552fe52381e9f0a",
+}, {
+    "_id": {
+        "$oid": "57296df8e552fe52381e9f0a"
+    },
     "name": "Ewaves",
     "address": "159 Woodrow Court, Ladera, Delaware, 888",
     "oStatus": "occupied",
     "rPrice": 1286,
     "uCost": 823
-  },
-  {
-    "_id": "57296df83316f2dd42510d7b",
+}, {
+    "_id": {
+        "$oid": "57296df83316f2dd42510d7b"
+    },
     "name": "Rodemco",
     "address": "803 Jodie Court, Oley, Michigan, 2835",
     "oStatus": "available",
     "rPrice": 3351,
     "uCost": 825
-  },
-  {
-    "_id": "57296df810d8412b23bd24f7",
+}, {
+    "_id": {
+        "$oid": "57296df810d8412b23bd24f7"
+    },
     "name": "Handshake",
     "address": "198 Beard Street, Yukon, West Virginia, 6184",
     "oStatus": "occupied",
     "rPrice": 3811,
     "uCost": 833
-  },
-  {
-    "_id": "57296df8193ac89dec24a4f5",
+}, {
+    "_id": {
+        "$oid": "57296df8193ac89dec24a4f5"
+    },
     "name": "Tripsch",
     "address": "617 Poplar Avenue, Harborton, Oklahoma, 1122",
     "oStatus": "occupied",
     "rPrice": 1354,
     "uCost": 61
-  },
-  {
-    "_id": "57296df80a651225a187dac3",
+}, {
+    "_id": {
+        "$oid": "57296df80a651225a187dac3"
+    },
     "name": "Makingway",
     "address": "235 Georgia Avenue, Shepardsville, South Carolina, 7813",
     "oStatus": "occupied",
     "rPrice": 3845,
     "uCost": 692
-  },
-  {
-    "_id": "57296df88f8b27b46a5b1ade",
+}, {
+    "_id": {
+        "$oid": "57296df88f8b27b46a5b1ade"
+    },
     "name": "Zillan",
     "address": "114 Heath Place, Gadsden, Arkansas, 9718",
     "oStatus": "available",
     "rPrice": 550,
     "uCost": 733
-  },
-  {
-    "_id": "57296df8f6ae2ee996d6ded9",
+}, {
+    "_id": {
+        "$oid": "57296df8f6ae2ee996d6ded9"
+    },
     "name": "Kinetica",
     "address": "702 Carroll Street, Genoa, Northern Mariana Islands, 4997",
     "oStatus": "available",
     "rPrice": 449,
     "uCost": 308
-  },
-  {
-    "_id": "57296df8bbab65f79c856f50",
+}, {
+    "_id": {
+        "$oid": "57296df8bbab65f79c856f50"
+    },
     "name": "Zillatide",
     "address": "655 Lafayette Walk, Tibbie, North Carolina, 8962",
     "oStatus": "occupied",
     "rPrice": 523,
     "uCost": 638
-  },
-  {
-    "_id": "57296df8876738f10b7dc96e",
+}, {
+    "_id": {
+        "$oid": "57296df8876738f10b7dc96e"
+    },
     "name": "Extremo",
     "address": "657 Ridgewood Avenue, Hayden, Washington, 7167",
     "oStatus": "occupied",
     "rPrice": 1674,
     "uCost": 754
-  },
-  {
-    "_id": "57296df88cfe85824b9dfb2c",
+}, {
+    "_id": {
+        "$oid": "57296df88cfe85824b9dfb2c"
+    },
     "name": "Filodyne",
     "address": "351 Devon Avenue, Loveland, Louisiana, 4456",
     "oStatus": "available",
     "rPrice": 3785,
     "uCost": 187
-  },
-  {
-    "_id": "57296df815748554fbeeee81",
+}, {
+    "_id": {
+        "$oid": "57296df815748554fbeeee81"
+    },
     "name": "Multron",
     "address": "976 Bridgewater Street, Lisco, Connecticut, 7753",
     "oStatus": "occupied",
     "rPrice": 932,
     "uCost": 77
-  },
-  {
-    "_id": "57296df882d59b9981dfcc61",
+}, {
+    "_id": {
+        "$oid": "57296df882d59b9981dfcc61"
+    },
     "name": "Futurity",
     "address": "272 Glenmore Avenue, Springhill, Montana, 3374",
     "oStatus": "occupied",
     "rPrice": 3828,
     "uCost": 129
-  },
-  {
-    "_id": "57296df8045c6ee46c790ddb",
+}, {
+    "_id": {
+        "$oid": "57296df8045c6ee46c790ddb"
+    },
     "name": "Surelogic",
     "address": "772 Berkeley Place, Beechmont, Nevada, 9775",
     "oStatus": "available",
     "rPrice": 702,
     "uCost": 343
-  },
-  {
-    "_id": "57296df85cbd65a04ea1f424",
+}, {
+    "_id": {
+        "$oid": "57296df85cbd65a04ea1f424"
+    },
     "name": "Kog",
     "address": "153 Ridge Boulevard, Cowiche, Maine, 4670",
     "oStatus": "available",
     "rPrice": 1277,
     "uCost": 978
-  },
-  {
-    "_id": "57296df81563d457ac2732d8",
+}, {
+    "_id": {
+        "$oid": "57296df81563d457ac2732d8"
+    },
     "name": "Roughies",
     "address": "813 Royce Place, Cutter, California, 6868",
     "oStatus": "available",
     "rPrice": 2713,
     "uCost": 490
-  },
-  {
-    "_id": "57296df8d0b9279d36d17917",
+}, {
+    "_id": {
+        "$oid": "57296df8d0b9279d36d17917"
+    },
     "name": "Bitendrex",
     "address": "918 Surf Avenue, Saticoy, Idaho, 1205",
     "oStatus": "available",
     "rPrice": 413,
     "uCost": 536
-  },
-  {
-    "_id": "57296df895e8d66de3a1ed25",
+}, {
+    "_id": {
+        "$oid": "57296df895e8d66de3a1ed25"
+    },
     "name": "Menbrain",
     "address": "834 Irving Avenue, Welda, Guam, 2818",
     "oStatus": "occupied",
     "rPrice": 3933,
     "uCost": 240
-  },
-  {
-    "_id": "57296df81bd45371aaf16ac3",
+}, {
+    "_id": {
+        "$oid": "57296df81bd45371aaf16ac3"
+    },
     "name": "Applidec",
     "address": "954 Stockholm Street, Whipholt, Federated States Of Micronesia, 2435",
     "oStatus": "occupied",
     "rPrice": 3656,
     "uCost": 242
-  },
-  {
-    "_id": "57296df82734832d650dd22f",
+}, {
+    "_id": {
+        "$oid": "57296df82734832d650dd22f"
+    },
     "name": "Velos",
     "address": "366 Hawthorne Street, Blackgum, North Dakota, 3725",
     "oStatus": "occupied",
     "rPrice": 2112,
     "uCost": 573
-  },
-  {
-    "_id": "57296df8642fae4d14e60a6f",
+}, {
+    "_id": {
+        "$oid": "57296df8642fae4d14e60a6f"
+    },
     "name": "Polarium",
     "address": "158 Veronica Place, Clinton, Kansas, 4794",
     "oStatus": "occupied",
     "rPrice": 2570,
     "uCost": 932
-  },
-  {
-    "_id": "57296df8a5f152b481ce508d",
+}, {
+    "_id": {
+        "$oid": "57296df8a5f152b481ce508d"
+    },
     "name": "Hatology",
     "address": "412 Linden Street, Fulford, Illinois, 5437",
     "oStatus": "available",
     "rPrice": 2597,
     "uCost": 841
-  },
-  {
-    "_id": "57296df82201bf451cd76916",
+}, {
+    "_id": {
+        "$oid": "57296df82201bf451cd76916"
+    },
     "name": "Bulljuice",
     "address": "701 Noble Street, Shaft, American Samoa, 7244",
     "oStatus": "available",
     "rPrice": 1919,
     "uCost": 57
-  },
-  {
-    "_id": "57296df8b8121e389aac6f1e",
+}, {
+    "_id": {
+        "$oid": "57296df8b8121e389aac6f1e"
+    },
     "name": "Zytrex",
     "address": "102 Sumner Place, Kiskimere, Ohio, 7186",
     "oStatus": "available",
     "rPrice": 3084,
     "uCost": 195
-  },
-  {
-    "_id": "57296df8d6826273d66e4230",
+}, {
+    "_id": {
+        "$oid": "57296df8d6826273d66e4230"
+    },
     "name": "Qnekt",
     "address": "736 Church Avenue, Santel, New Mexico, 2786",
     "oStatus": "available",
     "rPrice": 1700,
     "uCost": 238
-  },
-  {
-    "_id": "57296df8b57fde7d6b53b898",
+}, {
+    "_id": {
+        "$oid": "57296df8b57fde7d6b53b898"
+    },
     "name": "Vinch",
     "address": "882 Woodbine Street, Westwood, Marshall Islands, 4468",
     "oStatus": "occupied",
     "rPrice": 1341,
     "uCost": 963
-  },
-  {
-    "_id": "57296df887f3e23f0861bcbf",
+}, {
+    "_id": {
+        "$oid": "57296df887f3e23f0861bcbf"
+    },
     "name": "Acrodance",
     "address": "664 Brighton Court, Hiko, Hawaii, 2643",
     "oStatus": "occupied",
     "rPrice": 3179,
     "uCost": 466
-  },
-  {
-    "_id": "57296df81b1f53f4ff8f6cf0",
+}, {
+    "_id": {
+        "$oid": "57296df81b1f53f4ff8f6cf0"
+    },
     "name": "Miraclis",
     "address": "290 Richards Street, Dupuyer, Iowa, 8278",
     "oStatus": "available",
     "rPrice": 3983,
     "uCost": 209
-  },
-  {
-    "_id": "57296df88055967a2aa79fe3",
+}, {
+    "_id": {
+        "$oid": "57296df88055967a2aa79fe3"
+    },
     "name": "Apex",
     "address": "164 Jamison Lane, Chamberino, Massachusetts, 1663",
     "oStatus": "available",
     "rPrice": 1572,
     "uCost": 557
-  },
-  {
-    "_id": "57296df8f3c245d2e353ca73",
+}, {
+    "_id": {
+        "$oid": "57296df8f3c245d2e353ca73"
+    },
     "name": "Comtrak",
     "address": "153 Ocean Avenue, Highland, Florida, 4627",
     "oStatus": "available",
     "rPrice": 2842,
     "uCost": 320
-  },
-  {
-    "_id": "57296df8559a4f19816c28a7",
+}, {
+    "_id": {
+        "$oid": "57296df8559a4f19816c28a7"
+    },
     "name": "Valpreal",
     "address": "694 Sunnyside Court, Allison, Arizona, 2583",
     "oStatus": "available",
     "rPrice": 2214,
     "uCost": 315
-  },
-  {
-    "_id": "57296df85823a9c66ac509dd",
+}, {
+    "_id": {
+        "$oid": "57296df85823a9c66ac509dd"
+    },
     "name": "Knowlysis",
     "address": "735 Garfield Place, Sanford, Texas, 3159",
     "oStatus": "available",
     "rPrice": 3826,
     "uCost": 225
-  },
-  {
-    "_id": "57296df8a05ae0a3769616c4",
+}, {
+    "_id": {
+        "$oid": "57296df8a05ae0a3769616c4"
+    },
     "name": "Plutorque",
     "address": "287 Woodpoint Road, Ona, Alaska, 4262",
     "oStatus": "available",
     "rPrice": 1779,
     "uCost": 608
-  },
-  {
-    "_id": "57296df803fba007f78005b7",
+}, {
+    "_id": {
+        "$oid": "57296df803fba007f78005b7"
+    },
     "name": "Keeg",
     "address": "186 Cortelyou Road, Temperanceville, Georgia, 3042",
     "oStatus": "occupied",
     "rPrice": 3225,
     "uCost": 793
-  },
-  {
-    "_id": "57296df81ff2cb1cbcbdd7eb",
+}, {
+    "_id": {
+        "$oid": "57296df81ff2cb1cbcbdd7eb"
+    },
     "name": "Accidency",
     "address": "433 Montauk Avenue, Utting, Virginia, 758",
     "oStatus": "occupied",
     "rPrice": 1492,
     "uCost": 884
-  },
-  {
-    "_id": "57296df809ce4d9ba178f52a",
+}, {
+    "_id": {
+        "$oid": "57296df809ce4d9ba178f52a"
+    },
     "name": "Geofarm",
     "address": "309 Hutchinson Court, Yardville, Oregon, 1341",
     "oStatus": "occupied",
     "rPrice": 2752,
     "uCost": 276
-  },
-  {
-    "_id": "57296df84dda41a5fec9442f",
+}, {
+    "_id": {
+        "$oid": "57296df84dda41a5fec9442f"
+    },
     "name": "Zogak",
     "address": "273 Summit Street, Rockbridge, Colorado, 2615",
     "oStatus": "available",
     "rPrice": 1942,
     "uCost": 393
-  },
-  {
-    "_id": "57296df88a9f704b42f35e38",
+}, {
+    "_id": {
+        "$oid": "57296df88a9f704b42f35e38"
+    },
     "name": "Isoternia",
     "address": "552 Decatur Street, Wiscon, Indiana, 9963",
     "oStatus": "available",
     "rPrice": 2349,
     "uCost": 571
-  },
-  {
-    "_id": "57296df8f55fbfe4340950c3",
+}, {
+    "_id": {
+        "$oid": "57296df8f55fbfe4340950c3"
+    },
     "name": "Vixo",
     "address": "306 Throop Avenue, Thomasville, Kentucky, 2538",
     "oStatus": "available",
     "rPrice": 1228,
     "uCost": 341
-  },
-  {
-    "_id": "57296df8f0103073e9b28cff",
+}, {
+    "_id": {
+        "$oid": "57296df8f0103073e9b28cff"
+    },
     "name": "Isopop",
     "address": "255 Madeline Court, Boonville, Mississippi, 4027",
     "oStatus": "occupied",
     "rPrice": 2234,
     "uCost": 184
-  },
-  {
-    "_id": "57296df8e1b1c5f65492d2c1",
+}, {
+    "_id": {
+        "$oid": "57296df8e1b1c5f65492d2c1"
+    },
     "name": "Firewax",
     "address": "438 Underhill Avenue, Woodlands, Vermont, 4131",
     "oStatus": "occupied",
     "rPrice": 1606,
     "uCost": 707
-  },
-  {
-    "_id": "57296df8e3397cab5d2d0e28",
+}, {
+    "_id": {
+        "$oid": "57296df8e3397cab5d2d0e28"
+    },
     "name": "Marqet",
     "address": "385 Dank Court, Elliston, Pennsylvania, 9969",
     "oStatus": "occupied",
     "rPrice": 1000,
     "uCost": 156
-  },
-  {
-    "_id": "57296df84bb990a30e0ba0d4",
+}, {
+    "_id": {
+        "$oid": "57296df84bb990a30e0ba0d4"
+    },
     "name": "Zillidium",
     "address": "970 Franklin Street, Graball, Wisconsin, 5583",
     "oStatus": "available",
     "rPrice": 2708,
     "uCost": 596
-  },
-  {
-    "_id": "57296df85b4c418c8a890434",
+}, {
+    "_id": {
+        "$oid": "57296df85b4c418c8a890434"
+    },
     "name": "Medmex",
     "address": "631 Nassau Street, Finderne, District Of Columbia, 2828",
     "oStatus": "occupied",
     "rPrice": 2804,
     "uCost": 71
-  },
-  {
-    "_id": "57296df86622c7ef7ba85683",
+}, {
+    "_id": {
+        "$oid": "57296df86622c7ef7ba85683"
+    },
     "name": "Accruex",
     "address": "815 Flatlands Avenue, Devon, Puerto Rico, 6530",
     "oStatus": "occupied",
     "rPrice": 1063,
     "uCost": 406
-  },
-  {
-    "_id": "57296df87fae1bc389da5f85",
+}, {
+    "_id": {
+        "$oid": "57296df87fae1bc389da5f85"
+    },
     "name": "Xymonk",
     "address": "541 Rockwell Place, Salix, Virgin Islands, 7638",
     "oStatus": "available",
     "rPrice": 1109,
     "uCost": 365
-  },
-  {
-    "_id": "57296df8151c8ee92f5c670e",
+}, {
+    "_id": {
+        "$oid": "57296df8151c8ee92f5c670e"
+    },
     "name": "Interloo",
     "address": "715 Voorhies Avenue, Heil, Alabama, 3636",
     "oStatus": "available",
     "rPrice": 1489,
     "uCost": 459
-  },
-  {
-    "_id": "57296df8d4d851c32cdfe019",
+}, {
+    "_id": {
+        "$oid": "57296df8d4d851c32cdfe019"
+    },
     "name": "Zolavo",
     "address": "554 Bay Avenue, Winston, Utah, 7046",
     "oStatus": "available",
     "rPrice": 3368,
     "uCost": 428
-  },
-  {
-    "_id": "57296df8a8259645f31109df",
+}, {
+    "_id": {
+        "$oid": "57296df8a8259645f31109df"
+    },
     "name": "Calcula",
     "address": "615 Story Street, Ruffin, Rhode Island, 2358",
     "oStatus": "available",
     "rPrice": 3713,
     "uCost": 538
-  },
-  {
-    "_id": "57296df878076024481c40b2",
+}, {
+    "_id": {
+        "$oid": "57296df878076024481c40b2"
+    },
     "name": "Martgo",
     "address": "966 Herkimer Court, Rosewood, Minnesota, 3687",
     "oStatus": "occupied",
     "rPrice": 772,
     "uCost": 206
-  },
-  {
-    "_id": "57296df813ca97bcab517ae8",
+}, {
+    "_id": {
+        "$oid": "57296df813ca97bcab517ae8"
+    },
     "name": "Kongle",
     "address": "168 Moore Place, Zarephath, South Dakota, 9633",
     "oStatus": "occupied",
     "rPrice": 3660,
     "uCost": 274
-  },
-  {
-    "_id": "57296df80cd4fd4405f0f3ef",
+}, {
+    "_id": {
+        "$oid": "57296df80cd4fd4405f0f3ef"
+    },
     "name": "Halap",
     "address": "795 Cranberry Street, Edgar, Tennessee, 3557",
     "oStatus": "occupied",
     "rPrice": 3002,
     "uCost": 380
-  },
-  {
-    "_id": "57296df803a42faa91c6895c",
+}, {
+    "_id": {
+        "$oid": "57296df803a42faa91c6895c"
+    },
     "name": "Koffee",
     "address": "151 Drew Street, Chumuckla, New Hampshire, 8998",
     "oStatus": "occupied",
     "rPrice": 3715,
     "uCost": 107
-  },
-  {
-    "_id": "57296df880333d607533fd68",
+}, {
+    "_id": {
+        "$oid": "57296df880333d607533fd68"
+    },
     "name": "Circum",
     "address": "659 Lee Avenue, Fairfield, Palau, 3023",
     "oStatus": "occupied",
     "rPrice": 651,
     "uCost": 352
-  },
-  {
-    "_id": "57296df8d6d8e3eeed05aa8a",
+}, {
+    "_id": {
+        "$oid": "57296df8d6d8e3eeed05aa8a"
+    },
     "name": "Geoform",
     "address": "553 Jerome Street, Oretta, Missouri, 7517",
     "oStatus": "occupied",
     "rPrice": 2982,
     "uCost": 982
-  },
-  {
-    "_id": "57296df86706a697fe26ba26",
+}, {
+    "_id": {
+        "$oid": "57296df86706a697fe26ba26"
+    },
     "name": "Colaire",
     "address": "874 Highland Avenue, Taycheedah, New York, 6592",
     "oStatus": "available",
     "rPrice": 1586,
     "uCost": 681
-  },
-  {
-    "_id": "57296df8863a6e0ac6b15234",
+}, {
+    "_id": {
+        "$oid": "57296df8863a6e0ac6b15234"
+    },
     "name": "Datagen",
     "address": "380 Ovington Court, Summerfield, New Jersey, 4559",
     "oStatus": "occupied",
     "rPrice": 1418,
     "uCost": 748
-  },
-  {
-    "_id": "57296df896c54de069c63728",
+}, {
+    "_id": {
+        "$oid": "57296df896c54de069c63728"
+    },
     "name": "Netplode",
     "address": "807 Midwood Street, Salunga, Nebraska, 1645",
     "oStatus": "available",
     "rPrice": 2407,
     "uCost": 823
-  },
-  {
-    "_id": "57296df869d9e1321a7be631",
+}, {
+    "_id": {
+        "$oid": "57296df869d9e1321a7be631"
+    },
     "name": "Inventure",
     "address": "976 Jefferson Avenue, Courtland, Maryland, 1887",
     "oStatus": "occupied",
     "rPrice": 2908,
     "uCost": 203
-  },
-  {
-    "_id": "57296df836b0a0c01c44247a",
+}, {
+    "_id": {
+        "$oid": "57296df836b0a0c01c44247a"
+    },
     "name": "Viocular",
     "address": "903 Farragut Road, Bloomington, Delaware, 4482",
     "oStatus": "occupied",
     "rPrice": 934,
     "uCost": 212
-  },
-  {
-    "_id": "57296df89c9d4aa577603bff",
+}, {
+    "_id": {
+        "$oid": "57296df89c9d4aa577603bff"
+    },
     "name": "Plasmox",
     "address": "829 Hancock Street, Murillo, Michigan, 1212",
     "oStatus": "available",
     "rPrice": 706,
     "uCost": 649
-  },
-  {
-    "_id": "57296df8810686417250f82e",
+}, {
+    "_id": {
+        "$oid": "57296df8810686417250f82e"
+    },
     "name": "Rotodyne",
     "address": "355 Powers Street, Chemung, West Virginia, 7658",
     "oStatus": "available",
     "rPrice": 1492,
     "uCost": 794
-  },
-  {
-    "_id": "57296df87f29db17eaa89d47",
+}, {
+    "_id": {
+        "$oid": "57296df87f29db17eaa89d47"
+    },
     "name": "Techmania",
     "address": "459 Hampton Place, Manila, Oklahoma, 100",
     "oStatus": "available",
     "rPrice": 3696,
     "uCost": 472
-  },
-  {
-    "_id": "57296df8d5f0bf9c4e89d0a7",
+}, {
+    "_id": {
+        "$oid": "57296df8d5f0bf9c4e89d0a7"
+    },
     "name": "Euron",
     "address": "738 Celeste Court, Macdona, South Carolina, 6700",
     "oStatus": "available",
     "rPrice": 3669,
     "uCost": 206
-  },
-  {
-    "_id": "57296df8e9e741342751e214",
+}, {
+    "_id": {
+        "$oid": "57296df8e9e741342751e214"
+    },
     "name": "Zidox",
     "address": "102 Kay Court, Coral, Arkansas, 4362",
     "oStatus": "available",
     "rPrice": 3171,
     "uCost": 58
-  },
-  {
-    "_id": "57296df84dedf9d0bcdaf1e0",
+}, {
+    "_id": {
+        "$oid": "57296df84dedf9d0bcdaf1e0"
+    },
     "name": "Zillanet",
     "address": "114 Micieli Place, Mulberry, Northern Mariana Islands, 1784",
     "oStatus": "available",
     "rPrice": 1930,
     "uCost": 240
-  },
-  {
-    "_id": "57296df876fe4e78991b76f1",
+}, {
+    "_id": {
+        "$oid": "57296df876fe4e78991b76f1"
+    },
     "name": "Hopeli",
     "address": "125 Hamilton Avenue, Otranto, North Carolina, 7225",
     "oStatus": "available",
     "rPrice": 2419,
     "uCost": 710
-  },
-  {
-    "_id": "57296df86a8ecec04fa3f8ad",
+}, {
+    "_id": {
+        "$oid": "57296df86a8ecec04fa3f8ad"
+    },
     "name": "Vantage",
     "address": "607 Aitken Place, Oceola, Washington, 3217",
     "oStatus": "occupied",
     "rPrice": 2163,
     "uCost": 91
-  },
-  {
-    "_id": "57296df8ed796d45fd3a57b6",
+}, {
+    "_id": {
+        "$oid": "57296df8ed796d45fd3a57b6"
+    },
     "name": "Isologica",
     "address": "944 Lefferts Place, Albrightsville, Louisiana, 10000",
     "oStatus": "available",
     "rPrice": 2124,
     "uCost": 135
-  },
-  {
-    "_id": "57296df897c0f586a34dee4c",
+}, {
+    "_id": {
+        "$oid": "57296df897c0f586a34dee4c"
+    },
     "name": "Cosmosis",
     "address": "632 Dunne Place, Sutton, Connecticut, 2361",
     "oStatus": "available",
     "rPrice": 2381,
     "uCost": 709
-  },
-  {
-    "_id": "57296df8eae1980a3f087cff",
+}, {
+    "_id": {
+        "$oid": "57296df8eae1980a3f087cff"
+    },
     "name": "Zepitope",
     "address": "383 Pine Street, Martinsville, Montana, 9555",
     "oStatus": "available",
     "rPrice": 3292,
     "uCost": 127
-  },
-  {
-    "_id": "57296df8a51ab98bacf12b61",
+}, {
+    "_id": {
+        "$oid": "57296df8a51ab98bacf12b61"
+    },
     "name": "Velity",
     "address": "349 Rodney Street, Defiance, Nevada, 1631",
     "oStatus": "occupied",
     "rPrice": 602,
     "uCost": 751
-  },
-  {
-    "_id": "57296df80b8a7d204a95f793",
+}, {
+    "_id": {
+        "$oid": "57296df80b8a7d204a95f793"
+    },
     "name": "Bedlam",
     "address": "804 Montana Place, Machias, Maine, 8169",
     "oStatus": "occupied",
     "rPrice": 1663,
     "uCost": 986
-  },
-  {
-    "_id": "57296df8ee76d031bda97557",
+}, {
+    "_id": {
+        "$oid": "57296df8ee76d031bda97557"
+    },
     "name": "Turnabout",
     "address": "340 Bush Street, Why, California, 3970",
     "oStatus": "available",
     "rPrice": 2433,
     "uCost": 806
-  },
-  {
-    "_id": "57296df88ec5c6bfc534b0b8",
+}, {
+    "_id": {
+        "$oid": "57296df88ec5c6bfc534b0b8"
+    },
     "name": "Ecstasia",
     "address": "528 Canton Court, Franklin, Idaho, 9856",
     "oStatus": "available",
     "rPrice": 641,
     "uCost": 556
-  },
-  {
-    "_id": "57296df8d5b39ac058dc9cfd",
+}, {
+    "_id": {
+        "$oid": "57296df8d5b39ac058dc9cfd"
+    },
     "name": "Comtext",
     "address": "307 Lott Street, Ballico, Guam, 5849",
     "oStatus": "occupied",
     "rPrice": 421,
     "uCost": 817
-  },
-  {
-    "_id": "57296df81aa2ee63689bd00d",
+}, {
+    "_id": {
+        "$oid": "57296df81aa2ee63689bd00d"
+    },
     "name": "Prowaste",
     "address": "831 McClancy Place, Rutherford, Federated States Of Micronesia, 6478",
     "oStatus": "available",
     "rPrice": 2371,
     "uCost": 819
-  },
-  {
-    "_id": "57296df84b9d3cf6e22a203f",
+}, {
+    "_id": {
+        "$oid": "57296df84b9d3cf6e22a203f"
+    },
     "name": "Obones",
     "address": "638 Garland Court, Evergreen, North Dakota, 2179",
     "oStatus": "occupied",
     "rPrice": 2340,
     "uCost": 457
-  },
-  {
-    "_id": "57296df8f29d5525d026125d",
+}, {
+    "_id": {
+        "$oid": "57296df8f29d5525d026125d"
+    },
     "name": "Synkgen",
     "address": "618 Thatford Avenue, Jamestown, Kansas, 1992",
     "oStatus": "occupied",
     "rPrice": 846,
     "uCost": 976
-  },
-  {
-    "_id": "57296df879c6bd57c91fa209",
+}, {
+    "_id": {
+        "$oid": "57296df879c6bd57c91fa209"
+    },
     "name": "Parcoe",
     "address": "453 Thomas Street, Chautauqua, Illinois, 5352",
     "oStatus": "occupied",
     "rPrice": 476,
     "uCost": 454
-  },
-  {
-    "_id": "57296df8e58273df9d70a9ba",
+}, {
+    "_id": {
+        "$oid": "57296df8e58273df9d70a9ba"
+    },
     "name": "Incubus",
     "address": "157 Neptune Avenue, Worton, American Samoa, 3280",
     "oStatus": "available",
     "rPrice": 854,
     "uCost": 465
-  },
-  {
-    "_id": "57296df8792742fc07e5daeb",
+}, {
+    "_id": {
+        "$oid": "57296df8792742fc07e5daeb"
+    },
     "name": "Qimonk",
     "address": "240 Kings Hwy, Kilbourne, Ohio, 5042",
     "oStatus": "occupied",
     "rPrice": 2454,
     "uCost": 833
-  },
-  {
-    "_id": "57296df85e9417a16ece81ef",
+}, {
+    "_id": {
+        "$oid": "57296df85e9417a16ece81ef"
+    },
     "name": "Accupharm",
     "address": "697 Rutherford Place, Crucible, New Mexico, 2963",
     "oStatus": "occupied",
     "rPrice": 3386,
     "uCost": 235
-  },
-  {
-    "_id": "57296df880e3ba1fbf74d103",
+}, {
+    "_id": {
+        "$oid": "57296df880e3ba1fbf74d103"
+    },
     "name": "Reversus",
     "address": "278 Sands Street, Alden, Marshall Islands, 1451",
     "oStatus": "available",
     "rPrice": 1445,
     "uCost": 146
-  },
-  {
-    "_id": "57296df8238ace7e1db25dcc",
+}, {
+    "_id": {
+        "$oid": "57296df8238ace7e1db25dcc"
+    },
     "name": "Gadtron",
     "address": "725 Ryder Avenue, Chase, Hawaii, 3797",
     "oStatus": "occupied",
     "rPrice": 433,
     "uCost": 146
-  },
-  {
-    "_id": "57296df8ac012a3cfb29c8ab",
+}, {
+    "_id": {
+        "$oid": "57296df8ac012a3cfb29c8ab"
+    },
     "name": "Strozen",
     "address": "757 Ferry Place, Saranap, Iowa, 9288",
     "oStatus": "available",
     "rPrice": 1769,
     "uCost": 156
-  },
-  {
-    "_id": "57296df8b872724a79c6bdda",
+}, {
+    "_id": {
+        "$oid": "57296df8b872724a79c6bdda"
+    },
     "name": "Izzby",
     "address": "788 Commercial Street, Baden, Massachusetts, 1710",
     "oStatus": "available",
     "rPrice": 3470,
     "uCost": 785
-  },
-  {
-    "_id": "57296df8e7402aecc1b4a774",
+}, {
+    "_id": {
+        "$oid": "57296df8e7402aecc1b4a774"
+    },
     "name": "Permadyne",
     "address": "756 Haring Street, Bagtown, Florida, 6151",
     "oStatus": "available",
     "rPrice": 3153,
     "uCost": 976
-  },
-  {
-    "_id": "57296df82dd29c17b7a2d5fe",
+}, {
+    "_id": {
+        "$oid": "57296df82dd29c17b7a2d5fe"
+    },
     "name": "Sealoud",
     "address": "519 Grove Place, Clarktown, Arizona, 8714",
     "oStatus": "occupied",
     "rPrice": 3374,
     "uCost": 904
-  },
-  {
-    "_id": "57296df89ee8cc719dcb0fac",
+}, {
+    "_id": {
+        "$oid": "57296df89ee8cc719dcb0fac"
+    },
     "name": "Savvy",
     "address": "883 Gilmore Court, Hardyville, Texas, 9312",
     "oStatus": "available",
     "rPrice": 2697,
     "uCost": 225
-  },
-  {
-    "_id": "57296df808712e54ea7a48a7",
+}, {
+    "_id": {
+        "$oid": "57296df808712e54ea7a48a7"
+    },
     "name": "Senmei",
     "address": "218 Dictum Court, Churchill, Alaska, 5975",
     "oStatus": "occupied",
     "rPrice": 818,
     "uCost": 224
-  },
-  {
-    "_id": "57296df8892f023545de11f7",
+}, {
+    "_id": {
+        "$oid": "57296df8892f023545de11f7"
+    },
     "name": "Venoflex",
     "address": "121 Roebling Street, Wacissa, Georgia, 1348",
     "oStatus": "occupied",
     "rPrice": 3182,
     "uCost": 108
-  },
-  {
-    "_id": "57296df8565d2f07cd1f9c81",
+}, {
+    "_id": {
+        "$oid": "57296df8565d2f07cd1f9c81"
+    },
     "name": "Digirang",
     "address": "991 Frank Court, Bartonsville, Virginia, 8680",
     "oStatus": "available",
     "rPrice": 3040,
     "uCost": 456
-  },
-  {
-    "_id": "57296df8054311ffb5eaa32e",
+}, {
+    "_id": {
+        "$oid": "57296df8054311ffb5eaa32e"
+    },
     "name": "Zilodyne",
     "address": "577 Chestnut Avenue, Delwood, Oregon, 9931",
     "oStatus": "occupied",
     "rPrice": 2989,
     "uCost": 880
-  },
-  {
-    "_id": "57296df8304eb2bb3f526a66",
+}, {
+    "_id": {
+        "$oid": "57296df8304eb2bb3f526a66"
+    },
     "name": "Ludak",
     "address": "921 Cadman Plaza, Outlook, Colorado, 5248",
     "oStatus": "available",
     "rPrice": 935,
     "uCost": 973
-  }
-]
+}]
