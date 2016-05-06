@@ -10,16 +10,30 @@
                 <tbody>
                     <tr>
                         <td>
-                            <p><i class="fa fa-phone" aria-hidden="true"></i> {{property.oStatus}}</p>
+                            <p>Occupation status</p>
                         </td>
                         <td>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.address}}</p>
+                            <p>Address</p>
                         </td>
                         <td>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.rPrice}}</p>
+                            <p>Rent Price</p>
                         </td>
                         <td>
-                            <p><i class="fa fa-envelope-o" aria-hidden="true"></i> {{property.uCost}}</p>
+                            <p>Utilities Cost</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>{{property.clients[0].name | capitalize}} {{property.oStatus}}</p>
+                        </td>
+                        <td>
+                            <p>{{property.address}}</p>
+                        </td>
+                        <td>
+                            <p>{{property.rPrice}}</p>
+                        </td>
+                        <td>
+                            <p>{{property.uCost}}</p>
                         </td>
                     </tr>
                 </tbody>
@@ -30,7 +44,7 @@
                     <tbody>
                         <tr>
                             <td>Client name</td>
-                            <td>{{property.clients[0].name}}</td>
+                            <td>{{property.clients[0].name | capitalize}}</td>
                         </tr>
                         <tr>
                             <td>Client email</td>

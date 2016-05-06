@@ -63,15 +63,16 @@
         </div>
         <div class="col-sm-10 col-md-8">
             <br>
-            <h4>{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} results found</h4>
+            <h4>{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} properties available</h4>
+            <!-- <h4 ng-if="((properties | filter: searchFilterByStatus | filter: searchFilter).length)>1)">{{(properties | filter: searchFilterByStatus | filter: searchFilter).length}} properties available</h4> -->
             <input type="text" class="form-control" placeholder="search for his property to connect" ng-model="searchFilter">
             <br>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th ng-click="sortBy('name')" style="cursor: pointer;">Item name</th>
-                            <th ng-click="sortBy('address')" style="cursor: pointer;">address</th>
+                            <th ng-click="sortBy('name')" style="cursor: pointer;">Property name</th>
+                            <th ng-click="sortBy('address')" style="cursor: pointer;">Address</th>
                         </tr>
                     </thead>
                     <tbody ng-if="properties.length>0">

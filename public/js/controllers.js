@@ -128,7 +128,7 @@ app.controller('propertiesCtrl', function($scope, Properties, $filter) {
     Properties.getAll()
         .then(function(properties) {
             $scope.properties = properties.data.reverse();
-            properties.data.forEach((property)=>{
+            properties.data.forEach((property) => {
                 updateOStatus(property);
             })
 
@@ -136,27 +136,28 @@ app.controller('propertiesCtrl', function($scope, Properties, $filter) {
             console.log('err when get all properties: ', err);
         });
 
-        function updateOStatus(property) {
-            if (property.clients.length > 0) {
-                var id = property._id;
+    function updateOStatus(property) {
+        if (property.clients.length > 0) {
+            var id = property._id;
+            if (property.oStatus !== 'occupied') {
                 property.oStatus = 'occupied';
                 Properties.update(id, property)
                     .then(function(res) {}, function(err) {
                         console.log('err: ', err);
-                    }, function(err) {
-                        console.log(err);
                     })
-            } else {
-                var id = property._id;
+            }
+        } else {
+            if (property.oStatus == 'occupied') {
                 property.oStatus = 'available';
                 Properties.update(id, property)
                     .then(function(res) {}, function(err) {
                         console.log('err: ', err);
-                    }, function(err) {
-                        console.log(err);
                     })
             }
         }
+    }
+
+
     $scope.sortBy = (order) => {
         if ($scope.order === order) {
             $scope.order = `-${order}`;
@@ -282,27 +283,44 @@ app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Pr
                 console.log('err when get one property detail: ', err);
             });
     }
+
     function updateOStatus(property) {
         if (property.clients.length > 0) {
             var id = property._id;
-            property.oStatus = 'occupied';
-            Properties.update(id, property)
-                .then(function(res) {}, function(err) {
-                    console.log('err: ', err);
-                }, function(err) {
-                    console.log(err);
-                })
+            if (property.oStatus !== 'occupied') {
+                property.oStatus = 'occupied';
+                Properties.update(id, property)
+                    .then(function(res) {}, function(err) {
+                        console.log('err: ', err);
+                    })
+            }
         } else {
-            var id = property._id;
-            property.oStatus = 'available';
-            Properties.update(id, property)
-                .then(function(res) {}, function(err) {
-                    console.log('err: ', err);
-                }, function(err) {
-                    console.log(err);
-                })
+            if (property.oStatus == 'occupied') {
+                property.oStatus = 'available';
+                Properties.update(id, property)
+                    .then(function(res) {}, function(err) {
+                        console.log('err: ', err);
+                    })
+            }
         }
     }
+    // function updateOStatus(property) {
+    //     if (property.clients.length > 0) {
+    //         var id = property._id;
+    //         property.oStatus = 'occupied';
+    //         Properties.update(id, property)
+    //             .then(function(res) {}, function(err) {
+    //                 console.log('err: ', err);
+    //             })
+    //     } else {
+    //         var id = property._id;
+    //         property.oStatus = 'available';
+    //         Properties.update(id, property)
+    //             .then(function(res) {}, function(err) {
+    //                 console.log('err: ', err);
+    //             })
+    //     }
+    // }
 
 
     $scope.addClient = (propertyId, clientId) => {
