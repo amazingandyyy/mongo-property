@@ -128,9 +128,35 @@ app.controller('propertiesCtrl', function($scope, Properties, $filter) {
     Properties.getAll()
         .then(function(properties) {
             $scope.properties = properties.data.reverse();
+            properties.data.forEach((property)=>{
+                updateOStatus(property);
+            })
+
         }, function(err) {
             console.log('err when get all properties: ', err);
         });
+
+        function updateOStatus(property) {
+            if (property.clients.length > 0) {
+                var id = property._id;
+                property.oStatus = 'occupied';
+                Properties.update(id, property)
+                    .then(function(res) {}, function(err) {
+                        console.log('err: ', err);
+                    }, function(err) {
+                        console.log(err);
+                    })
+            } else {
+                var id = property._id;
+                property.oStatus = 'available';
+                Properties.update(id, property)
+                    .then(function(res) {}, function(err) {
+                        console.log('err: ', err);
+                    }, function(err) {
+                        console.log(err);
+                    })
+            }
+        }
     $scope.sortBy = (order) => {
         if ($scope.order === order) {
             $scope.order = `-${order}`;
@@ -237,6 +263,7 @@ app.controller('propertiesCtrl', function($scope, Properties, $filter) {
 
 });
 
+
 app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Properties) {
     console.log('getPropertyByIdCtrl loaded');
     // console.log('$stateParams: ', $stateParams.clientId);
@@ -249,26 +276,34 @@ app.controller('getPropertyByIdCtrl', function($scope, $filter, $stateParams, Pr
                 console.log(property);
                 var property = property.data;
                 $scope.property = property;
-                $scope.editOne = (index, id) => {
-                    $scope.edditedProperty = angular.copy($scope.properties[index]);
-                    $scope.edditedProperty.index = index;
-                }
-                $scope.edittedOne = (index, id) => {
-                    Properties.update(id, $scope.edditedProperty)
-                        .then(function(res) {
-                            $scope.properties[index] = $scope.edditedProperty;
-                            $scope.edditedProperty = null;
-                        }, function(err) {
-                            console.log('err: ', err);
-                        })
-                }
-                // if(property.length > 0){
-                //     $scope.property = ''
-                // }
+                console.log('property.length: ', property.clients.length);
+                updateOStatus(property);
             }, function(err) {
                 console.log('err when get one property detail: ', err);
             });
     }
+    function updateOStatus(property) {
+        if (property.clients.length > 0) {
+            var id = property._id;
+            property.oStatus = 'occupied';
+            Properties.update(id, property)
+                .then(function(res) {}, function(err) {
+                    console.log('err: ', err);
+                }, function(err) {
+                    console.log(err);
+                })
+        } else {
+            var id = property._id;
+            property.oStatus = 'available';
+            Properties.update(id, property)
+                .then(function(res) {}, function(err) {
+                    console.log('err: ', err);
+                }, function(err) {
+                    console.log(err);
+                })
+        }
+    }
+
 
     $scope.addClient = (propertyId, clientId) => {
         console.log('propertyId: ', propertyId);
