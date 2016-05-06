@@ -16,3 +16,11 @@
     margin-bottom: -7px;
     margin-top: -3px;
 }
+.btn {
+    margin-left: 3px;
+    margin-top: 3px;
+    transition: .2s all ease-in-out;
+}
+.btn:hover {
+    transform: scale(1.02);
+}
